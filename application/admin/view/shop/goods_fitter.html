@@ -1,0 +1,119 @@
+{extend name='main'}
+
+{block name="content"}
+<style type="text/css">
+    .layui-form-label {
+        width: auto !important;
+        padding: 0 8px;
+        height: 32px;
+        line-height: 30px;
+    }
+</style>
+<div class="think-box-shadow">
+    <fieldset>
+        <legend>筛选条件</legend>
+        <form class="layui-form layui-form-pane form-search3" onsubmit="return false" method="get" autocomplete="off">
+            <div class="layui-form-item layui-inline">
+                <label class="layui-form-label">最小金额</label>
+                <div class="layui-input-inline">
+                    <input id="price_min" name="price_min" value="{$Think.get.price_min}" type="number" placeholder="请输最小金额" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item layui-inline">&nbsp;&nbsp;--&nbsp;&nbsp;&nbsp;</div>
+            <div class="layui-form-item layui-inline">
+                <label class="layui-form-label">最大金额</label>
+                <div class="layui-input-inline">
+                    <input id="price_max" name="price_max" value="{$Think.get.price_max}" type="number" placeholder="请输入最大金额" class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item layui-inline">
+                <button id="search_btn" class="layui-btn"><i class="layui-icon">&#xe615;</i> 搜 索</button>
+                <button id="openM" hidden="">筛选</button>
+            </div>
+        </form>
+        <script>
+            // form.render()
+        </script>
+    </fieldset>
+
+    <!-- <fieldset>
+        <legend>数量设置</legend>
+        <div class="layui-form-item">
+            <div class="layui-input-inline">
+                <input name="goods_num" type="number" value="" placeholder="请输入商品数量。默认为1" class="layui-input">
+            </div>
+        </div>
+    </fieldset> -->
+
+    <table class="layui-table margin-top-15" lay-skin="line">
+        {notempty name='list'}
+        <thead>
+        <tr>
+            <th class='text-left nowrap'>商品ID</th>
+            <th class='text-left'>商品名称</th>
+            <th class='text-left nowrap'>商品价格</th>
+            <th class='text-left nowrap'>数量</th>
+            <th class='text-left nowrap'>操作</th>
+        </tr>
+        </thead>
+        {/notempty}
+        <tbody>
+        {foreach $list as $key=>$vo}
+        <tr>
+            <td class='text-left nowrap'>{$vo.id}</td>
+            <td class='text-left'>{$vo.goods_name}</td>
+            <td class='text-left nowrap'>¥{$vo.goods_price}</td>
+            <td class='text-left nowrap'>
+                <input name="goods_num_{$vo.id}" type="number" value="" placeholder="1" class="layui-input">
+            </td>
+            <td class='text-left nowrap'>
+                <a class="layui-btn layui-btn-xs layui-btn" onClick="add_op({$vo.id},{$vo.goods_price})">添加</a>
+            </td>
+        </tr>
+        {/foreach}
+        </tbody>
+    </table>
+
+    {empty name='list'}<span class="notdata">没有记录哦</span>{else}{$pagehtml|raw|default=''}{/empty}
+
+</div>
+<script>
+    function add_op(id, price){
+        let goods_id_str=$("input[name=goods_id_str]").val();
+        let amount_str=$("input[name=amount_str]").val();
+        let total=parseFloat($('.layui-word-aux').eq(0).attr('sum'));
+        let obj='goods_num_'+id;
+        let goods_num=parseFloat($("input[name="+obj+"]").val());
+        if (!goods_num) {
+            goods_num=1;
+        }
+        price=goods_num*price;
+        if (total) {
+            total+=price;
+        }else{
+            total=price;
+        }
+        $("input[name=goods_num]").val('');
+        if (goods_id_str) {
+            goods_id_str+='-'+id;
+            amount_str+='-'+goods_num;
+        }else{
+            goods_id_str=id;
+            amount_str=goods_num;
+        }
+        $("input[name=goods_id_str]").val(goods_id_str);
+        $("input[name=amount_str]").val(amount_str);
+        let tips='当前筛选金额：'+total;
+        $('.layui-word-aux').eq(0).attr('sum',total).text(tips);
+    }
+    $('#search_btn').click(function(){
+        let url='{:url("admin/shop/goods_fitter")}';
+        let price_min=$("#price_min").val();
+        let price_max=$("#price_max").val();
+        url+='?price_min='+price_min+'&price_max='+price_max;
+        layer.closeAll()
+        $('#openM').attr('data-modal',url).click();
+    });
+</script>
+{/block}

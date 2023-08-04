@@ -1,0 +1,96 @@
+
+
+{extend name='main'}
+
+{block name="content"}
+<link rel="stylesheet" href="__ROOT__/static/plugs/awesome/fonts.css?at={:date('md')}">
+<link rel="stylesheet" href="__ROOT__/static/plugs/layui/css/layui.css?at={:date('md')}">
+<link rel="stylesheet" href="__ROOT__/static/theme/css/console.css?at={:date('md')}">
+<script src="__ROOT__/static/plugs/layui/layui.all.js"></script>
+<script src="__ROOT__/static/plugs/require/require.js"></script>
+<script src="__ROOT__/static/admin.js"></script>
+
+<style type="text/css">
+    .layui-form-label {
+        width: auto !important;
+        padding: 0 8px;
+        height: 32px;
+        line-height: 30px;
+    }
+</style>
+<div class="think-box-shadow">
+    <fieldset>
+        <legend>筛选条件</legend>
+        <form class="layui-form layui-form-pane form-search3" action="{:request()->url()}" method="get" autocomplete="off">
+            <div class="layui-form-item layui-inline">
+                <label class="layui-form-label">最小金额</label>
+                <div class="layui-input-inline">
+                    <input id="price_min" name="price_min" value="{$Think.get.price_min}" type="number" placeholder="请输最小金额" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item layui-inline">&nbsp;&nbsp;--&nbsp;&nbsp;&nbsp;</div>
+            <div class="layui-form-item layui-inline">
+                <label class="layui-form-label">最大金额</label>
+                <div class="layui-input-inline">
+                    <input id="price_max" name="price_max" value="{$Think.get.price_max}" type="number" placeholder="请输入最大金额" class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item layui-inline">
+                <button id="search_btn" class="layui-btn"><i class="layui-icon">&#xe615;</i> 搜 索</button>
+                <button id="openM" hidden="">筛选</button>
+            </div>
+        </form>
+        <script>
+            form.render()
+        </script>
+    </fieldset>
+
+    <table class="layui-table margin-top-15" lay-skin="line">
+        {notempty name='list'}
+        <thead>
+        <tr>
+            <th class='text-left nowrap'>商品ID</th>
+            <th class='text-left'>商品名称</th>
+            <th class='text-left nowrap'>商品价格</th>
+            <th class='text-left nowrap'>数量</th>
+            <th class='text-left nowrap'>操作</th>
+        </tr>
+        </thead>
+        {/notempty}
+        <tbody>
+        {foreach $list as $key=>$vo}
+        <tr>
+            <td class='text-left nowrap'>{$vo.id}</td>
+            <td class='text-left'>{$vo.goods_name}</td>
+            <td class='text-left nowrap'>¥{$vo.goods_price}</td>
+            <td class='text-left nowrap'>
+                <input id="goods_num_{$vo.id}" name="goods_num_{$vo.id}" type="number" value="1" min="1"  class="layui-input">
+            </td>
+            <td class='text-left nowrap'>
+                <a class="layui-btn layui-btn-xs layui-btn" onClick="op_replace({$vo.id})">替换</a>
+            </td>
+        </tr>
+        {/foreach}
+        </tbody>
+    </table>
+
+    {empty name='list'}<span class="notdata">没有记录哦</span>{else}{$pagehtml|raw|default=''}{/empty}
+
+</div>
+<script>
+    function op_replace(id){
+        let goods_num_id='#goods_num_'+id;
+        let amount=$(goods_num_id).val();
+        window.top.op_replace(id,amount);
+    }
+    /*$('#search_btn').click(function(){
+        let url='{:url("admin/shop/goods_fitter")}';
+        let price_min=$("#price_min").val();
+        let price_max=$("#price_max").val();
+        url+='?price_min='+price_min+'&price_max='+price_max;
+        layer.closeAll()
+        $('#openM').attr('data-modal',url).click();
+    });*/
+</script>
+{/block}

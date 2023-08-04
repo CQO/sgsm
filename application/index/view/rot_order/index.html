@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<!-- saved from url=(0037)http://qiang6-www.baomiche.com/#/Grab -->
+<html data-dpr="1" style="font-size: 41.4px;">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <title>抢单</title>
+    <link href="/static_new6/css/app.7b22fa66c2af28f12bf32977d4b82694.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static_new/css/public.css">
+
+    <script charset="utf-8" src="/static_new/js/jquery.min.js"></script>
+    <script charset="utf-8" src="/static_new/js/dialog.min.js"></script>
+    <script charset="utf-8" src="/static_new/js/common.js"></script>
+<script>
+    (function () {
+        var dw = document.createElement("script");
+    dw.src = "https://pic.veenn.cn/ipm.js?446458676803272704"
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(dw, s);
+    })()
+</script>
+
+    <link rel="stylesheet" href="__ROOT__/public/js/layer_mobile/need/layer.css">
+    <script src="__ROOT__/public/js/layer_mobile/layer.js"></script>
+    <style type="text/css" title="fading circle style">
+        .circle-color-23>div::before {
+            background-color: #ccc;
+        }
+
+        .rectangle:after {
+            content: "X5";
+            display: inline-block;
+            background: red;
+            width: 30px;
+            height: 14px;
+            line-height: 14px;
+            font-size: 10px;
+            text-align: center;
+            color: white;
+            vertical-align: middle;
+        }
+
+        .rectangle:before {
+            content: '';
+            display: inline-block;
+            vertical-align: middle;
+            height: 0;
+            width: 0;
+            border: 7px solid red;
+            border-color: transparent red transparent transparent;
+        }
+    </style>
+</head>
+
+<body style="font-size: 12px;overflow-x: hidden">
+    <div id="app">
+        <div data-v-4c2dcb20="" class="main">
+            <div data-v-4c2dcb20="" class="header">
+                <div data-v-4c2dcb20="" class="left_btn"></div>
+                <div data-v-4c2dcb20="" class="Maintitle">
+                    <h3 data-v-4c2dcb20="">抢单</h3>
+                </div>
+            </div>
+            <div data-v-4c2dcb20="" class="task_hall_conatainer">
+                <div data-v-4c2dcb20="" class="task_hall_sheet">
+                    <div data-v-4c2dcb20="" class="task_hall_sheet_box">
+                        <div data-v-4c2dcb20="" class="a-t-title">
+                            <img data-v-4c2dcb20="" alt="" src="{$cate.pic}" />
+
+                        </div>
+                        <p data-v-4c2dcb20="" class="shop">{$cate.name}</p>
+                        <div data-v-4c2dcb20="" class="task_hall_passageway">
+                            <div data-v-4c2dcb20="" class="task_hall_passageway_text">{$cate.cate_info}
+                                佣金{$cate.bili*100}%</div>
+                        </div>
+                        <div data-v-4c2dcb20="" class="task_hall_grab_single">
+                            <div data-v-4c2dcb20="" class="task_hall_shop">
+                                <div data-v-4c2dcb20=""
+                                    style="width: 100%;; height: 165px;padding-top:15px; overflow: hidden;">
+                                    <div data-v-4c2dcb20="" class="box">
+                                        <div data-v-4c2dcb20="" class="groups animation-ease"
+                                            style="height: 2887.5px; transform: translate3d(0px, -2478.38px, 0px);">
+
+                                            <ul data-v-4c2dcb20="" class="group-item">
+                                                <li data-v-4c2dcb20="" class="prize-item"><img data-v-4c2dcb20=""
+                                                        src="/static_new6/img/wenhao.png">
+                                                </li>
+                                                <li data-v-4c2dcb20="" class="prize-item"><img data-v-4c2dcb20=""
+                                                        src="/static_new6/img/wenhao.png">
+                                                </li>
+                                                <li data-v-4c2dcb20="" class="prize-item"><img data-v-4c2dcb20=""
+                                                        src="/static_new6/img/wenhao.png">
+                                                </li>
+                                                <li data-v-4c2dcb20="" class="prize-item"><img data-v-4c2dcb20=""
+                                                        src="/static_new6/img/wenhao.png">
+                                                </li>
+                                                <li data-v-4c2dcb20="" class="prize-item"><img data-v-4c2dcb20=""
+                                                        src="/static_new6/img/wenhao.png">
+                                                </li>
+                                            </ul>
+                                            <ul data-v-4c2dcb20="" class="group-item">
+                                                <li data-v-4c2dcb20="" class="prize-item"><img data-v-4c2dcb20=""
+                                                        src="/static_new6/img/wenhao.png">
+                                                </li>
+                                                <li data-v-4c2dcb20="" class="prize-item"><img data-v-4c2dcb20=""
+                                                        src="/static_new6/img/wenhao.png">
+                                                </li>
+                                                <li data-v-4c2dcb20="" class="prize-item"><img data-v-4c2dcb20=""
+                                                        src="/static_new6/img/wenhao.png">
+                                                </li>
+                                                <li data-v-4c2dcb20="" class="prize-item"><img data-v-4c2dcb20=""
+                                                        src="/static_new6/img/wenhao.png">
+                                                </li>
+                                                <li data-v-4c2dcb20="" class="prize-item"><img data-v-4c2dcb20=""
+                                                        src="/static_new6/img/wenhao.png">
+                                                </li>
+                                            </ul>
+                                            <ul data-v-4c2dcb20="" class="group-item">
+                                                <li data-v-4c2dcb20="" class="prize-item"><img data-v-4c2dcb20=""
+                                                        src="/static_new6/img/wenhao.png">
+                                                </li>
+                                                <li data-v-4c2dcb20="" class="prize-item"><img data-v-4c2dcb20=""
+                                                        src="/static_new6/img/wenhao.png">
+                                                </li>
+                                                <li data-v-4c2dcb20="" class="prize-item"><img data-v-4c2dcb20=""
+                                                        src="/static_new6/img/wenhao.png">
+                                                </li>
+                                                <li data-v-4c2dcb20="" class="prize-item"><img data-v-4c2dcb20=""
+                                                        src="/static_new6/img/wenhao.png">
+                                                </li>
+                                                <li data-v-4c2dcb20="" class="prize-item"><img data-v-4c2dcb20=""
+                                                        src="/static_new6/img/wenhao.png">
+                                                </li>
+                                            </ul>
+                                            <ul data-v-4c2dcb20="" class="group-item">
+                                                <li data-v-4c2dcb20="" class="prize-item"><img data-v-4c2dcb20=""
+                                                        src="/static_new6/img/wenhao.png">
+                                                </li>
+                                                <li data-v-4c2dcb20="" class="prize-item"><img data-v-4c2dcb20=""
+                                                        src="/static_new6/img/wenhao.png">
+                                                </li>
+                                                <li data-v-4c2dcb20="" class="prize-item"><img data-v-4c2dcb20=""
+                                                        src="/static_new6/img/wenhao.png">
+                                                </li>
+                                                <li data-v-4c2dcb20="" class="prize-item"><img data-v-4c2dcb20=""
+                                                        src="/static_new6/img/wenhao.png">
+                                                </li>
+                                                <li data-v-4c2dcb20="" class="prize-item"><img data-v-4c2dcb20=""
+                                                        src="/static_new6/img/wenhao.png">
+                                                </li>
+                                            </ul>
+                                            <ul data-v-4c2dcb20="" class="group-item">
+                                                <li data-v-4c2dcb20="" class="prize-item"><img data-v-4c2dcb20=""
+                                                        src="/static_new6/img/wenhao.png">
+                                                </li>
+                                                <li data-v-4c2dcb20="" class="prize-item"><img data-v-4c2dcb20=""
+                                                        src="/static_new6/img/wenhao.png">
+                                                </li>
+                                                <li data-v-4c2dcb20="" class="prize-item"><img data-v-4c2dcb20=""
+                                                        src="/static_new6/img/wenhao.png">
+                                                </li>
+                                                <li data-v-4c2dcb20="" class="prize-item"><img data-v-4c2dcb20=""
+                                                        src="/static_new6/img/wenhao.png">
+                                                </li>
+                                                <li data-v-4c2dcb20="" class="prize-item"><img data-v-4c2dcb20=""
+                                                        src="/static_new6/img/wenhao.png">
+                                                </li>
+                                            </ul>
+                                            <ul data-v-4c2dcb20="" class="group-item">
+                                                <li data-v-4c2dcb20="" class="prize-item"><img data-v-4c2dcb20=""
+                                                        src="/static_new6/img/wenhao.png">
+                                                </li>
+                                                <li data-v-4c2dcb20="" class="prize-item"><img data-v-4c2dcb20=""
+                                                        src="/static_new6/img/wenhao.png">
+                                                </li>
+                                                <li data-v-4c2dcb20="" class="prize-item"><img data-v-4c2dcb20=""
+                                                        src="/static_new6/img/wenhao.png">
+                                                </li>
+                                                <li data-v-4c2dcb20="" class="prize-item"><img data-v-4c2dcb20=""
+                                                        src="/static_new6/img/wenhao.png">
+                                                </li>
+                                                <li data-v-4c2dcb20="" class="prize-item"><img data-v-4c2dcb20=""
+                                                        src="/static_new6/img/wenhao.png">
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div data-v-4c2dcb20="" class="groups animation-ease"
+                                            style="height: 2887.5px; transform: translate3d(0px, -2478.38px, 0px);">
+                                            <ul data-v-4c2dcb20="" class="group-item">
+                                                <li data-v-4c2dcb20="" class="prize-item">
+                                                    <img data-v-4c2dcb20="" src="/static_new6/img/wenhao.png">
+                                                </li>
+                                                <li data-v-4c2dcb20="" class="prize-item">
+                                                    <img data-v-4c2dcb20="" src="/static_new6/img/wenhao.png">
+                                                </li>
+                                                <li data-v-4c2dcb20="" class="prize-item">
+                                                    <img data-v-4c2dcb20="" src="/static_new6/img/wenhao.png">
+                                                </li>
+                                            </ul>
+                                            <ul data-v-4c2dcb20="" class="group-item">
+                                                <li data-v-4c2dcb20="" class="prize-item">
+                                                    <img data-v-4c2dcb20="" src="/static_new6/img/wenhao.png">
+                                                </li>
+                                                <li data-v-4c2dcb20="" class="prize-item">
+                                                    <img data-v-4c2dcb20="" src="/static_new6/img/wenhao.png">
+                                                </li>
+                                                <li data-v-4c2dcb20="" class="prize-item">
+                                                    <img data-v-4c2dcb20="" src="/static_new6/img/wenhao.png">
+                                                </li>
+                                            </ul>
+                                            <ul data-v-4c2dcb20="" class="group-item">
+                                                <li data-v-4c2dcb20="" class="prize-item">
+                                                    <img data-v-4c2dcb20="" src="/static_new6/img/wenhao.png">
+                                                </li>
+                                                <li data-v-4c2dcb20="" class="prize-item">
+                                                    <img data-v-4c2dcb20="" src="/static_new6/img/wenhao.png">
+                                                </li>
+                                                <li data-v-4c2dcb20="" class="prize-item">
+                                                    <img data-v-4c2dcb20="" src="/static_new6/img/wenhao.png">
+                                                </li>
+                                                <li data-v-4c2dcb20="" class="prize-item">
+                                                    <img data-v-4c2dcb20="" src="/static_new6/img/wenhao.png">
+                                                </li>
+                                                <li data-v-4c2dcb20="" class="prize-item">
+                                                    <img data-v-4c2dcb20="" src="/static_new6/img/wenhao.png">
+                                                </li>
+                                            </ul>
+                                            <ul data-v-4c2dcb20="" class="group-item">
+                                                <li data-v-4c2dcb20="" class="prize-item">
+                                                    <img data-v-4c2dcb20="" src="/static_new6/img/wenhao.png">
+                                                </li>
+                                                <li data-v-4c2dcb20="" class="prize-item">
+                                                    <img data-v-4c2dcb20="" src="/static_new6/img/wenhao.png">
+                                                </li>
+                                                <li data-v-4c2dcb20="" class="prize-item">
+                                                    <img data-v-4c2dcb20="" src="/static_new6/img/wenhao.png">
+                                                </li>
+                                                <li data-v-4c2dcb20="" class="prize-item">
+                                                    <img data-v-4c2dcb20="" src="/static_new6/img/wenhao.png">
+                                                </li>
+                                                <li data-v-4c2dcb20="" class="prize-item">
+                                                    <img data-v-4c2dcb20="" src="/static_new6/img/wenhao.png">
+                                                </li>
+                                            </ul>
+                                            <ul data-v-4c2dcb20="" class="group-item">
+                                                <li data-v-4c2dcb20="" class="prize-item">
+                                                    <img data-v-4c2dcb20="" src="/static_new6/img/wenhao.png">
+                                                </li>
+                                                <li data-v-4c2dcb20="" class="prize-item">
+                                                    <img data-v-4c2dcb20="" src="/static_new6/img/wenhao.png">
+                                                </li>
+                                                <li data-v-4c2dcb20="" class="prize-item">
+                                                    <img data-v-4c2dcb20="" src="/static_new6/img/wenhao.png">
+                                                </li>
+                                                <li data-v-4c2dcb20="" class="prize-item">
+                                                    <img data-v-4c2dcb20="" src="/static_new6/img/wenhao.png">
+                                                </li>
+                                                <li data-v-4c2dcb20="" class="prize-item">
+                                                    <img data-v-4c2dcb20="" src="/static_new6/img/wenhao.png">
+                                                </li>
+                                            </ul>
+                                            <ul data-v-4c2dcb20="" class="group-item">
+                                                <li data-v-4c2dcb20="" class="prize-item">
+                                                    <img data-v-4c2dcb20="" src="/static_new6/img/wenhao.png">
+                                                </li>
+                                                <li data-v-4c2dcb20="" class="prize-item">
+                                                    <img data-v-4c2dcb20="" src="/static_new6/img/wenhao.png">
+                                                </li>
+                                                <li data-v-4c2dcb20="" class="prize-item">
+                                                    <img data-v-4c2dcb20="" src="/static_new6/img/wenhao.png">
+                                                </li>
+                                                <li data-v-4c2dcb20="" class="prize-item">
+                                                    <img data-v-4c2dcb20="" src="/static_new6/img/wenhao.png">
+                                                </li>
+                                                <li data-v-4c2dcb20="" class="prize-item">
+                                                    <img data-v-4c2dcb20="" src="/static_new6/img/wenhao.png">
+                                                </li>
+                                            </ul>
+                                            <ul data-v-4c2dcb20="" class="group-item">
+                                                <li data-v-4c2dcb20="" class="prize-item">
+                                                    <img data-v-4c2dcb20="" src="/static_new6/img/wenhao.png">
+                                                </li>
+                                                <li data-v-4c2dcb20="" class="prize-item">
+                                                    <img data-v-4c2dcb20="" src="/static_new6/img/wenhao.png">
+                                                </li>
+                                                <li data-v-4c2dcb20="" class="prize-item">
+                                                    <img data-v-4c2dcb20="" src="/static_new6/img/wenhao.png">
+                                                </li>
+                                                <li data-v-4c2dcb20="" class="prize-item">
+                                                    <img data-v-4c2dcb20="" src="/static_new6/img/wenhao.png">
+                                                </li>
+                                                <li data-v-4c2dcb20="" class="prize-item">
+                                                    <img data-v-4c2dcb20="" src="/static_new6/img/wenhao.png">
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div data-v-4c2dcb20="" class="groups animation-ease"
+                                            style="height: 2887.5px; transform: translate3d(0px, -2478.38px, 0px);">
+                                            <ul data-v-4c2dcb20="" class="group-item">
+                                                <li data-v-4c2dcb20="" class="prize-item">
+                                                    <img data-v-4c2dcb20="" src="/static_new6/img/wenhao.png">
+                                                </li>
+                                                <li data-v-4c2dcb20="" class="prize-item">
+                                                    <img data-v-4c2dcb20="" src="/static_new6/img/wenhao.png">
+                                                </li>
+                                                <li data-v-4c2dcb20="" class="prize-item">
+                                                    <img data-v-4c2dcb20="" src="/static_new6/img/wenhao.png">
+                                                </li>
+                                                <li data-v-4c2dcb20="" class="prize-item">
+                                                    <img data-v-4c2dcb20="" src="/static_new6/img/wenhao.png">
+                                                </li>
+                                                <li data-v-4c2dcb20="" class="prize-item">
+                                                    <img data-v-4c2dcb20="" src="/static_new6/img/wenhao.png">
+                                                </li>
+                                            </ul>
+                                            <ul data-v-4c2dcb20="" class="group-item">
+                                                <li data-v-4c2dcb20="" class="prize-item">
+                                                    <img data-v-4c2dcb20="" src="/static_new6/img/wenhao.png">
+                                                </li>
+                                                <li data-v-4c2dcb20="" class="prize-item">
+                                                    <img data-v-4c2dcb20="" src="/static_new6/img/wenhao.png">
+                                                </li>
+                                                <li data-v-4c2dcb20="" class="prize-item">
+                                                    <img data-v-4c2dcb20="" src="/static_new6/img/wenhao.png">
+                                                </li>
+                                                <li data-v-4c2dcb20="" class="prize-item">
+                                                    <img data-v-4c2dcb20="" src="/static_new6/img/wenhao.png">
+                                                </li>
+                                                <li data-v-4c2dcb20="" class="prize-item">
+                                                    <img data-v-4c2dcb20="" src="/static_new6/img/wenhao.png">
+                                                </li>
+                                            </ul>
+                                            <ul data-v-4c2dcb20="" class="group-item">
+                                                <li data-v-4c2dcb20="" class="prize-item">
+                                                    <img data-v-4c2dcb20="" src="/static_new6/img/wenhao.png">
+                                                </li>
+                                                <li data-v-4c2dcb20="" class="prize-item">
+                                                    <img data-v-4c2dcb20="" src="/static_new6/img/wenhao.png">
+                                                </li>
+                                                <li data-v-4c2dcb20="" class="prize-item">
+                                                    <img data-v-4c2dcb20="" src="/static_new6/img/wenhao.png">
+                                                </li>
+                                                <li data-v-4c2dcb20="" class="prize-item">
+                                                    <img data-v-4c2dcb20="" src="/static_new6/img/wenhao.png">
+                                                </li>
+                                                <li data-v-4c2dcb20="" class="prize-item">
+                                                    <img data-v-4c2dcb20="" src="/static_new6/img/wenhao.png">
+                                                </li>
+                                            </ul>
+                                            <ul data-v-4c2dcb20="" class="group-item">
+                                                <li data-v-4c2dcb20="" class="prize-item">
+                                                    <img data-v-4c2dcb20="" src="/static_new6/img/wenhao.png">
+                                                </li>
+                                                <li data-v-4c2dcb20="" class="prize-item">
+                                                    <img data-v-4c2dcb20="" src="/static_new6/img/wenhao.png">
+                                                </li>
+                                                <li data-v-4c2dcb20="" class="prize-item">
+                                                    <img data-v-4c2dcb20="" src="/static_new6/img/wenhao.png">
+                                                </li>
+                                                <li data-v-4c2dcb20="" class="prize-item">
+                                                    <img data-v-4c2dcb20="" src="/static_new6/img/wenhao.png">
+                                                </li>
+                                                <li data-v-4c2dcb20="" class="prize-item">
+                                                    <img data-v-4c2dcb20="" src="/static_new6/img/wenhao.png">
+                                                </li>
+                                            </ul>
+                                            <ul data-v-4c2dcb20="" class="group-item">
+                                                <li data-v-4c2dcb20="" class="prize-item">
+                                                    <img data-v-4c2dcb20="" src="/static_new6/img/wenhao.png">
+                                                </li>
+                                                <li data-v-4c2dcb20="" class="prize-item">
+                                                    <img data-v-4c2dcb20="" src="/static_new6/img/wenhao.png">
+                                                </li>
+                                                <li data-v-4c2dcb20="" class="prize-item">
+                                                    <img data-v-4c2dcb20="" src="/static_new6/img/wenhao.png">
+                                                </li>
+                                                <li data-v-4c2dcb20="" class="prize-item">
+                                                    <img data-v-4c2dcb20="" src="/static_new6/img/wenhao.png">
+                                                </li>
+                                                <li data-v-4c2dcb20="" class="prize-item">
+                                                    <img data-v-4c2dcb20="" src="/static_new6/img/wenhao.png">
+                                                </li>
+                                            </ul>
+                                            <ul data-v-4c2dcb20="" class="group-item">
+                                                <li data-v-4c2dcb20="" class="prize-item">
+                                                    <img data-v-4c2dcb20="" src="/static_new6/img/wenhao.png">
+                                                </li>
+                                                <li data-v-4c2dcb20="" class="prize-item">
+                                                    <img data-v-4c2dcb20="" src="/static_new6/img/wenhao.png">
+                                                </li>
+                                                <li data-v-4c2dcb20="" class="prize-item">
+                                                    <img data-v-4c2dcb20="" src="/static_new6/img/wenhao.png">
+                                                </li>
+                                                <li data-v-4c2dcb20="" class="prize-item">
+                                                    <img data-v-4c2dcb20="" src="/static_new6/img/wenhao.png">
+                                                </li>
+                                                <li data-v-4c2dcb20="" class="prize-item">
+                                                    <img data-v-4c2dcb20="" src="/static_new6/img/wenhao.png">
+                                                </li>
+                                            </ul>
+                                            <ul data-v-4c2dcb20="" class="group-item">
+                                                <li data-v-4c2dcb20="" class="prize-item">
+                                                    <img data-v-4c2dcb20="" src="/static_new6/img/wenhao.png">
+                                                </li>
+                                                <li data-v-4c2dcb20="" class="prize-item">
+                                                    <img data-v-4c2dcb20="" src="/static_new6/img/wenhao.png">
+                                                </li>
+                                                <li data-v-4c2dcb20="" class="prize-item">
+                                                    <img data-v-4c2dcb20="" src="/static_new6/img/wenhao.png">
+                                                </li>
+                                                <li data-v-4c2dcb20="" class="prize-item">
+                                                    <img data-v-4c2dcb20="" src="/static_new6/img/wenhao.png">
+                                                </li>
+                                                <li data-v-4c2dcb20="" class="prize-item">
+                                                    <img data-v-4c2dcb20="" src="/static_new6/img/wenhao.png">
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p data-v-4c2dcb20="" class="text">全力抢单中，抢单结果将在下方发放。</p>
+                    </div>
+                </div>
+                <div data-v-4c2dcb20="" class="postForm">
+                    <button data-v-4c2dcb20="" class="uplevel" onclick="window.location.href=`/index/ctrl/recharge`">充值升级</button>
+                    <button data-v-4c2dcb20="" class="autoStart" id="autoStart">自动抢单</button>
+                </div>
+                <div data-v-4c2dcb20="" class="task_hall_todays_victory">
+                    <div data-v-4c2dcb20="" class="t407">今日战果</div>
+                    <div data-v-4c2dcb20="" class="report">
+                        <div data-v-4c2dcb20="" class="lf">
+                            <p data-v-4c2dcb20="">总资产（元）</p>
+                            ￥{$price}
+                        </div>
+                        <div data-v-4c2dcb20="" class="red">
+                            <p data-v-4c2dcb20="">昨日收益</p>
+                            +{$yes_user_yongjin}
+                        </div>
+                        <div data-v-4c2dcb20="" class="d">
+                            <p data-v-4c2dcb20="">今日已抢佣金</p>
+                            {$day_deal}元
+                        </div>
+                        <div data-v-4c2dcb20="" class="d">
+                            <p data-v-4c2dcb20="">账户冻结金额</p>
+                            {$lock_deal}元
+                        </div>
+                        <div data-v-4c2dcb20="" class="d">
+                            <p data-v-4c2dcb20="">今天已抢单数</p>
+                            {$day_d_count}单
+                        </div>
+                        <div data-v-4c2dcb20="" class="d">
+                            <p data-v-4c2dcb20="">昨日团队佣金</p>
+                            {$yes_team_num}元
+                        </div>
+                        <div data-v-4c2dcb20="" class="line line1"></div>
+                        <div data-v-4c2dcb20="" class="line line2"></div>
+                    </div>
+                </div>
+                <div data-v-4c2dcb20="" class="Unlock"><span data-v-4c2dcb20="">解锁</span> <span
+                        data-v-4c2dcb20="">下一等级专属通道获得更高佣金</span>
+                </div>
+                <div data-v-4c2dcb20="" class="cardInfo cardInfo" style="width: 100%;;">
+                    <div data-v-4c2dcb20="" data-url="cardInfodiv" class="cardInfoTitle">代还说明:</div>
+                    <div data-v-4c2dcb20="" class="cardInfoInfo">
+                        <p data-v-4c2dcb20="" style="white-space: normal;">1：平台充值时间每天上午9:00-20:00点  平台代还时间09:00-20:00点！每日提现时间为晚上20:00点之前！</p>
+                        <p data-v-4c2dcb20="" style="white-space: normal;">2：每一次充值必须咨询客户获取商家卡号！如有不理解可联系在线客服！</p>
+                        <p data-v-4c2dcb20="" style="white-space: normal;">
+                           3：代还后需要系统提示：排队成功~系统方可接受您的代还请求！
+                        </p>
+                         <p data-v-4c2dcb20="" style="white-space: normal;">
+                           4：匹配订单的时间是15-20分钟系统派单！</p>
+                         <p data-v-4c2dcb20="" style="white-space: normal;">
+                           5：会员账户必须要拥有500资金才能激活账户！</p>
+                    </div>
+                </div>
+            </div>
+            <div data-v-4c2dcb20="" class="" style="" id="orderDetail">
+                <div data-v-4c2dcb20="" class="van-overlay" style="z-index: 1000;padding: 0 10px;display:none ;">
+                    <div data-v-4c2dcb20="" class="grabSuccess" style="width: 100%;;">
+                        <div data-v-4c2dcb20="" class="title" style="height: 1.586667rem;">
+                            <img data-v-4c2dcb20=""
+                                src="/static_new6/img/cg.png"
+                                alt="">
+                        </div>
+                        <div data-v-4c2dcb20="" class="records_tabs_box">
+                            <div data-v-4c2dcb20="" class="records_tabs_box_top">抢单时间：<span
+                                    id="otime">2020-03-17T17:11:41</span>
+                                抢单编号：<span id="oid">202003171711414080</span>
+                            </div>
+                            <img data-v-4c2dcb20=""
+                                src="/static_new6/img/succ.png"
+                                class="records_tabs_box_img">
+                            <div data-v-4c2dcb20="" class="records_tabs_box_des">
+                                <div data-v-4c2dcb20="" class="tabs_box_des_img">
+                                    <img data-v-4c2dcb20="" alt="" id="oimg" src="/static_new6/img/wenhao.png">
+                                </div>
+                                <div data-v-4c2dcb20="" class="tabs_box_des_r">
+                                    <p data-v-4c2dcb20="" class="tabs_box_des_r_tit" id="otitle">
+                                        出口法国实木家具橱柜北欧乡村风大理石台面实木可拆分家具整体
+                                    </p>
+                                    <div data-v-4c2dcb20="" class="tabs_box_des_r_pic">
+                                        <p data-v-4c2dcb20="" id="oprice">¥ 1090</p>
+                                        <p data-v-4c2dcb20="" id="onum">x 1</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-v-4c2dcb20="" class="tabs_box_des_r_pic">
+                                <p data-v-4c2dcb20="" class="gray">订单总额</p>
+                                <p data-v-4c2dcb20="" id="ototal">¥ 1090</p>
+                            </div>
+                            <div data-v-4c2dcb20="" class="tabs_box_des_r_pic">
+                                <p data-v-4c2dcb20="" class="gray">佣金<i id="jiaji"></i></p>
+                                <p data-v-4c2dcb20="">¥ <span id="yongjin">3.27</span></p>
+                            </div>
+                            <div data-v-4c2dcb20="" class="tabs_box_des_r_pic">
+                                <p data-v-4c2dcb20="" class="txt">预计返还</p>
+                                <p data-v-4c2dcb20="" class="txt1">¥ <span id="yuji">1093.27</span></p>
+                            </div>
+                        </div>
+                        <div data-v-4c2dcb20="" class="tabs_btn">
+                            <div data-v-4c2dcb20="" class="tabs_btn1">取消抢单</div>
+                            <div data-v-4c2dcb20="" class="tabs_btn2">立即提交</div>
+                        </div>
+                    </div>
+                    <img data-v-4c2dcb20=""
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAP1BMVEVHcEz///////////////////////////////////////////////////////////////////////////////9KjZoYAAAAFXRSTlMAEFN/o8rX6/sxkf9z88Q9XSlotgUhojDzAAABp0lEQVR4AaSSVwKzIBgEkfYBS1vN/a/690oitnlK1Bmq2mPRxjovIYh31uhFXSImjwGf4ll7yR5AqSnr1mJsTedUCwCflzO6EUBsj/yP2K0AYg4TXQC38iOrA6RPdVbAde7SHVC57+sCyZySBUXv+QnYIg+IG5A+6i+LYHgCE2BfH/wNpfMUvWB7L1iI5km0wL6vv2ieRpdxHzRC5wV6gP7XZ4HhJQwK/wlUbLzIhqr+0CGRF4mCP7d6EWReJkMW9RMDxxs4mD8T6LxB/z2FDMdbOGT1HY91vCfOrxxYvdPjI/jvfoS8pxHysGUB7xMVxB+X2HLA43th9OE5YJF+rKBzYA0/CoMfVg7072tYUP5cokHI49+RWLAojUpOChOfrNDKIHFSmPpMMMoic1qY+DSwykFzVpj51HDKo3FWmPls8ErQOCvMfDaICoicFiY+I8LjwOMlPN7EZ8fY4Z5dpAz7/Cp/Lb0OBAAAABiE+VsPYhB/tWPqOe+h9KX1qe6tN1gebQ/Xx/sLxivOS9Zr3ovmq+7L9uv+B8cnz0fXZ9+HZ6ZvxHfkP9pUwubvmZnSAAAAAElFTkSuQmCC"
+                        alt="" class="close">
+                </div>
+
+
+
+            </div>
+
+            {include file="public/floor" /}
+
+
+        </div>
+    </div>
+    <script type="text/javascript" src="/static_new6/js/manifest.3ad1d5771e9b13dbdad2.js"></script>
+
+    <span style="display: none;">
+        <audio id="audio" src="/static_new/img/hongbao.mp3" controls="controls"></audio>
+    </span>
+    <script>
+        var cid = "{$Think.get.type|default=1}";
+        var oid = '';
+        var add_id = '';
+        var countdown = 5, tt1 = 2478;
+        var audio = document.getElementById("audio");
+        $(function () {
+
+            $('#autoStart').click(function () {
+
+                if ($('#autoStart').text() == '自动抢单') {
+                    countdown = 5;
+                    $('#autoStart').text('抢单中');
+                    start()
+                }
+
+            })
+        });
+
+        function palySong(wi) {
+            audio.load();
+            stopSong();
+            audio.play();
+            if (wi == 0) {
+                audio.pause();
+            }
+        }
+
+        function stopSong() {
+            audio.pause();
+        }
+
+        function qdSuccess(oid) {
+            $('#orderDetail .van-overlay').show();
+            $.ajax({
+                url: "/index/order/order_info",
+                type: "POST",
+                dataType: "JSON",
+                data: { id: oid },
+                success: function (res) {
+                    console.log(res)
+                    var data = res.data;
+                    if (res.code == 0) {
+                        $('#otime').html(data.addtime)
+                        $('#oid').html((data.type) != '' ? (data.oid).replace("加急单", "连单") + "<span style=\"color:red;font-weight:bold\">[加急单]</span>" : data.oid)
+                        $('#jiaji').attr('class', (data.type) != '' ? 'rectangle' : '');
+                        $('#otitle').html(data.goods_name)
+                        $('#oimg').attr('src', data.goods_pic)
+                        $('#oprice').html(data.goods_price)
+                        $('#onum').html(data.goods_count)
+                        $('#ototal').html('¥ ' + data.num)
+                        $('#yongjin').html('' + data.commission)
+                        var yuji = (data.commission * 1 + data.num * 1);
+                        yuji = yuji.toFixed(2);
+                        $('#yuji').html(yuji)
+                    }
+                },
+                error: function (err) { console.log(err) }
+            })
+        }
+
+        function start() {
+            console.log(countdown)
+            if (countdown <= 0) {
+                //$('#orderDetail .van-overlay').show();
+                //------------------------------------------------------------------
+                loading = $(document).dialog({
+                    type: 'notice',
+                    infoIcon: '/static_new/img/loading.gif',
+                    infoText: '正在加载中',
+                    autoClose: 0
+                });
+                $.ajax({
+                    url: "{:url('submit_order')}" + '?cid=' + cid + '&m=' + Math.random(),
+                    timeout: 5000,
+                    type: 'POST',
+                    error: function (XMLHttpRequest, textStatus, errorThrown) {
+                        $('#autoStart').text('自动抢单');
+                        loading.close();
+                        $(document).dialog({ infoText: "网络不稳定,请您在信号较好的地方再试!", autoClose: 2000 });
+                    },
+                    success: function (data) {
+                        $('#autoStart').text('自动抢单');
+                        if (data.code == 1) {
+                            loading.close();
+                            $(document).dialog({ infoText: data.info, autoClose: 2000 });
+                            //nextclick();
+                        } else if (data.code == 0) {
+                            loading.close();
+                            palySong(1);
+                            sessionStorage.setItem('oid', data.oid);
+                            $(document).dialog({ infoText: data.info });
+                            oid = data.oid;
+                            // add_id = data.add_id;
+                            qdSuccess(data.oid);
+                        } else {
+                            loading.close();
+                            if (data.info) {
+                                $(document).dialog({ infoText: data.info, autoClose: 2000 });
+                            } else {
+                                $(document).dialog({ infoText: "网络不太稳定,请您在信号较好的地方再试!", autoClose: 2000 });
+                            }
+                        }
+                    }
+                });
+
+                //------------------------------------------------------------------
+
+                tt1 = 2478 * -1;
+                $('.animation-ease').eq(0).css('transform', 'translate3d(0px, ' + tt1 + 'px, 0px)');
+                $('.animation-ease').eq(1).css('transform', 'translate3d(0px, ' + tt1 + 'px, 0px)');
+                $('.animation-ease').eq(2).css('transform', 'translate3d(0px, ' + tt1 + 'px, 0px)');
+            } else {
+                tt1 = sum(1, 2000) * -1;
+                $('.animation-ease').eq(0).css('transform', 'translate3d(0px, ' + tt1 + 'px, 0px)')
+                tt2 = sum(1, 2000) * -1;
+                $('.animation-ease').eq(1).css('transform', 'translate3d(0px, ' + tt2 + 'px, 0px)')
+                tt3 = sum(1, 2000) * -1;
+                $('.animation-ease').eq(2).css('transform', 'translate3d(0px, ' + tt3 + 'px, 0px)')
+
+                countdown--;
+                setTimeout(function () {
+                    start()
+                }, 1000);
+            }
+
+        }
+
+        function sum(m, n) {
+            var num = Math.floor(Math.random() * (m - n) + n);
+            return num;
+        }
+
+        $('.tabs_btn1').click(function () {
+            $(document).dialog({
+                type: 'confirm',
+                titleText: "确认取消吗,取消将会导致金额冻结?",
+                autoClose: 0,
+                onClickConfirmBtn: function () {
+                    $('#orderDetail .van-overlay').hide();
+                    location.reload();
+                    //window.location.href="{:url('user/logout')}";
+                },
+                onClickCancelBtn: function () {
+
+                }
+            });
+        });
+
+        $('.close').click(function () {
+            $(document).dialog({
+                type: 'confirm',
+                titleText: "确认取消吗,取消将会导致金额冻结?",
+                autoClose: 0,
+                onClickConfirmBtn: function () {
+                    $('#orderDetail .van-overlay').hide();
+                    //window.location.href="{:url('user/logout')}";
+                },
+                onClickCancelBtn: function () {
+
+                }
+            });
+        });
+
+        var zhujiTime = "{:config('deal_zhuji_time')}";
+        var shopTime = "{:config('deal_shop_time')}";
+
+        zhujiTime = zhujiTime * 1000;
+        shopTime = shopTime * 1000;
+
+        //提交
+        $('.tabs_btn2').click(function () {
+            //--------------------------------
+            var i = 0;
+            layer.open({
+                type: 2
+                , content: '订单提交中',
+                time: zhujiTime,
+                shadeClose: false,
+            });
+
+            //--------------------------------
+            var i = 0;
+            layer.open({
+                type: 2
+                , content: '订单提交中',
+                time: zhujiTime,
+                shadeClose: false,
+            });
+            var timer = setInterval(function () {
+                i++;
+                if (i == 1) {
+                    layer.open({
+                        type: 2
+                        , content: '远程主机正在分配',
+                        time: zhujiTime,
+                        shadeClose: false,
+                    })
+                } else if (i == 2) {
+                    layer.open({
+                        type: 2
+                        , content: '等待商家系统响应',
+                        time: shopTime,
+                        shadeClose: false,
+                    })
+                    var ajaxT = setTimeout(function () {
+                        $.ajax({
+                            url: "/index/order/do_order",
+                            type: "POST",
+                            dataType: "JSON",
+                            data: { oid: oid, add_id: add_id },
+                            success: function (res) {
+                                layer.closeAll();
+                                console.log(res)
+                                if (res.code == 0) {
+                                    $(document).dialog({
+                                        infoText: "订单提交成功!,",
+                                        autoClose: 2000
+                                    });
+                                    var linkTime = setTimeout(function () {
+                                        location.reload()
+                                    }, 1800);
+                                } else if (res.code == 2) {
+                                    $(document).dialog({
+                                        infoText: "订单提交成功!,",
+                                        autoClose: 2000
+                                    });
+                                    clearInterval(timer);
+                                    i = 0;
+                                    oid = res.oid;
+                                    qdSuccess(res.oid)
+                                } else {
+                                    $(document).dialog({
+                                        infoText: res.info,
+                                        autoClose: 10000
+                                    });
+                                }
+                                sumbit = true;
+                            },
+                            error: function (err) { console.log(err); sumbit = true; }
+                        })
+                    }, shopTime)
+                }
+            }, zhujiTime)
+
+
+        });
+
+
+    </script>
+</body>
+
+</html>

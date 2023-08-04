@@ -1,0 +1,2 @@
+<?php /*a:1:{s:68:"/www/wwwroot/ee.00008i.com/application/admin/view/users/picinfo.html";i:1636019666;}*/ ?>
+<img src='<?php echo htmlentities($pic); ?>' style="margin:20px auto;display:block;height:460px;" >
