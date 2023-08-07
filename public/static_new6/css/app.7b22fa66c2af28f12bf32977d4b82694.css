@@ -247,11 +247,10 @@ img {
     padding-bottom: .066667rem;
     margin: .066667rem;
     margin-bottom: .666667rem;
-    border-bottom: .013333rem solid #ccc
 }
 
 .box ul li .lco[data-v-c38e8882] {
-    width: .853333rem;
+    width: .753333rem;
     position: absolute;
     left: .4rem;
     top: .24rem;
@@ -265,7 +264,7 @@ img {
     height: 1.066667rem;
     border-radius: .533333rem;
     padding: 0 1.333333rem;
-    font-size: .4rem
+    font-size: 13px;
 }
 
 .box ul li .eye[data-v-c38e8882] {
@@ -287,14 +286,16 @@ img {
 }
 
 button[data-v-c38e8882] {
+    display: block;
     width: 100%;
-    font-size: .4rem;
-    line-height: .986667rem;
-    color: #f2d8be;
+    height: 1.2rem;
+    line-height: 1.2rem;
     text-align: center;
-    border-radius: .08rem;
-    background-color: #2f3848;
-    margin-top: .48rem
+    background: linear-gradient(0deg, #D5030B 0%, #FF6766 100%);
+    border-radius: 0.6rem;
+    font-size: 0.45rem;
+    color: #ffffff;
+    border: 0;
 }
 
 .box div p[data-v-c38e8882] {
@@ -1627,12 +1628,7 @@ input[type=checkbox][data-v-c38e8882]:checked {
 .main[data-v-79134734] {
     height: 100%;
     width: 100%;
-    margin-top: -1.2rem;
-    background-repeat: no-repeat;
-    background-size: 100% auto;
-    -moz-background-size: 100% auto;
-    background-color: #fff;
-    padding-top: 1.6rem
+
 }
 
 .logo[data-v-79134734] {

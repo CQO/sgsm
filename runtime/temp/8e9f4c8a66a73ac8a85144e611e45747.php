@@ -1,4 +1,4 @@
-<?php /*a:2:{s:70:"/www/wwwroot/ee.00008i.com/application/index/view/rot_order/index.html";i:1691086678;s:67:"/www/wwwroot/ee.00008i.com/application/index/view/public/floor.html";i:1691085499;}*/ ?>
+<?php /*a:2:{s:70:"/www/wwwroot/ee.00008i.com/application/index/view/rot_order/index.html";i:1691329500;s:67:"/www/wwwroot/ee.00008i.com/application/index/view/public/floor.html";i:1691085499;}*/ ?>
 <!DOCTYPE html><!-- saved from url=(0037)http://qiang6-www.baomiche.com/#/Grab --><html data-dpr="1" style="font-size: 41.4px;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1"><title>抢单</title><link href="/static_new6/css/app.7b22fa66c2af28f12bf32977d4b82694.css" rel="stylesheet"><link rel="stylesheet" href="/static_new/css/public.css"><script charset="utf-8" src="/static_new/js/jquery.min.js"></script><script charset="utf-8" src="/static_new/js/dialog.min.js"></script><script charset="utf-8" src="/static_new/js/common.js"></script><script>
     (function () {
         var dw = document.createElement("script");
@@ -87,7 +87,7 @@
                                 src="/static_new6/img/succ.png"
                                 class="records_tabs_box_img"><div data-v-4c2dcb20="" class="records_tabs_box_des"><div data-v-4c2dcb20="" class="tabs_box_des_img"><img data-v-4c2dcb20="" alt="" id="oimg" src="/static_new6/img/wenhao.png"></div><div data-v-4c2dcb20="" class="tabs_box_des_r"><p data-v-4c2dcb20="" class="tabs_box_des_r_tit" id="otitle">
                                         出口法国实木家具橱柜北欧乡村风大理石台面实木可拆分家具整体
-                                    </p><div data-v-4c2dcb20="" class="tabs_box_des_r_pic"><p data-v-4c2dcb20="" id="oprice">¥ 1090</p><p data-v-4c2dcb20="" id="onum">x 1</p></div></div></div><div data-v-4c2dcb20="" class="tabs_box_des_r_pic"><p data-v-4c2dcb20="" class="gray">订单总额</p><p data-v-4c2dcb20="" id="ototal">¥ 1090</p></div><div data-v-4c2dcb20="" class="tabs_box_des_r_pic"><p data-v-4c2dcb20="" class="gray">佣金<i id="jiaji"></i></p><p data-v-4c2dcb20="">¥ <span id="yongjin">3.27</span></p></div><div data-v-4c2dcb20="" class="tabs_box_des_r_pic"><p data-v-4c2dcb20="" class="txt">预计返还</p><p data-v-4c2dcb20="" class="txt1">¥ <span id="yuji">1093.27</span></p></div></div><div data-v-4c2dcb20="" class="tabs_btn"><div data-v-4c2dcb20="" class="tabs_btn1">取消抢单</div><div data-v-4c2dcb20="" class="tabs_btn2">立即提交</div></div></div><img data-v-4c2dcb20=""
+                                    </p><div data-v-4c2dcb20="" class="tabs_box_des_r_pic"><p data-v-4c2dcb20="" id="oprice">¥ 1090</p><p data-v-4c2dcb20="" id="onum">x 1</p></div></div></div><div data-v-4c2dcb20="" class="tabs_box_des_r_pic"><p data-v-4c2dcb20="" class="gray">订单总额</p><p data-v-4c2dcb20="" id="ototal">¥ 1090</p></div><div data-v-4c2dcb20="" class="tabs_box_des_r_pic"><p data-v-4c2dcb20="" class="gray">佣金<i id="jiaji"></i></p><p data-v-4c2dcb20="">¥ <span id="yongjin">3.27</span></p></div><div data-v-4c2dcb20="" class="tabs_box_des_r_pic"><p data-v-4c2dcb20="" class="txt">预计返还</p><p data-v-4c2dcb20="" class="txt1">¥ <span id="yuji">1093.27</span></p></div></div><div data-v-4c2dcb20="" class="tabs_btn"><!--div data-v-4c2dcb20="" class="tabs_btn1">取消抢单</div><div data-v-4c2dcb20="" class="tabs_btn2">立即提交</div--></div></div><img data-v-4c2dcb20=""
                         src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAP1BMVEVHcEz///////////////////////////////////////////////////////////////////////////////9KjZoYAAAAFXRSTlMAEFN/o8rX6/sxkf9z88Q9XSlotgUhojDzAAABp0lEQVR4AaSSVwKzIBgEkfYBS1vN/a/690oitnlK1Bmq2mPRxjovIYh31uhFXSImjwGf4ll7yR5AqSnr1mJsTedUCwCflzO6EUBsj/yP2K0AYg4TXQC38iOrA6RPdVbAde7SHVC57+sCyZySBUXv+QnYIg+IG5A+6i+LYHgCE2BfH/wNpfMUvWB7L1iI5km0wL6vv2ieRpdxHzRC5wV6gP7XZ4HhJQwK/wlUbLzIhqr+0CGRF4mCP7d6EWReJkMW9RMDxxs4mD8T6LxB/z2FDMdbOGT1HY91vCfOrxxYvdPjI/jvfoS8pxHysGUB7xMVxB+X2HLA43th9OE5YJF+rKBzYA0/CoMfVg7072tYUP5cokHI49+RWLAojUpOChOfrNDKIHFSmPpMMMoic1qY+DSwykFzVpj51HDKo3FWmPls8ErQOCvMfDaICoicFiY+I8LjwOMlPN7EZ8fY4Z5dpAz7/Cp/Lb0OBAAAABiE+VsPYhB/tWPqOe+h9KX1qe6tN1gebQ/Xx/sLxivOS9Zr3ovmq+7L9uv+B8cnz0fXZ9+HZ6ZvxHfkP9pUwubvmZnSAAAAAElFTkSuQmCC"
                         alt="" class="close"></div></div><div data-v-8755e8fe="" data-v-eebac136="" class="footer"><ul data-v-8755e8fe=""><li onclick="window.location.href='<?php echo url('index/home'); ?>'" data-v-8755e8fe="" class=""><img data-v-8755e8fe=""
                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAABLCAMAAAA8q5XRAAAAjVBMVEUAAAAiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiLrJpnlAAAALnRSTlMAQF77h7+AJeAQWzEMIPXvpBbRj3xQ9+jMmHCfTDYcsnVoRgbw3NXIriyMV7uTaboTugAAAddJREFUSMftku1yqjAQhjfBxEQEFEX8ttpqtT3nvf/LO0CpQYwkM2emM+30+cEu4Zmw2Q3Z4MCAPMkAxKGfu5lBSqjIy40xIjrjtHW74yN2RdApxLPLfX7FfFgmW4U/LntUuhWXHKNud4G4TzUsgOxyJYKDeTsEXe1+ag2DA9kjdwDs6YY3zDZ2N7TUOEJ+sbn9HBO644zcMko9x87ed0FthnOkY+tE0/t273AsXKut8NY+yEtID1gDU2owNffX2dIB4jWR37DWAf66rldQDyeMAdktS0BtKzdBjl633ENedXZ8xIq75b2AGNIr5rR2y4exwoiSkyaPnTldEkHRlvzkyiRPueArZT2s0U75kKor841DnqABd8g9LN4HFe87D3ltLrlbNsZPkqemBZk1bcqLfs0CT9bUyHsgqAEws6VGDlX8KccvM1t6iuiXX74R0UqXQU80udFKlGGSRFRFcQs3IitYqqx4QJa5Ji4rBOQH7CoztLh+Wgl6QIiw+cYK1IqVmHVTCFiFphIBw+3+7L4IIekT2ZZNfiOD/bds8JDZlaasEfrLHJF3GVohkZr4xHHAkihVmicJJ3LKWiZpVAYo3l0GW56hlvUPBJTu2nmpVplZyj6K/geLykKOShThAQAAAABJRU5ErkJggg=="
@@ -245,7 +245,7 @@
         $('.tabs_btn1').click(function () {
             $(document).dialog({
                 type: 'confirm',
-                titleText: "确认取消吗,取消将会导致金额冻结?",
+                titleText: "请耐心等待并关注抢单记录，后台正在排队派单中...",
                 autoClose: 0,
                 onClickConfirmBtn: function () {
                     $('#orderDetail .van-overlay').hide();
@@ -261,7 +261,7 @@
         $('.close').click(function () {
             $(document).dialog({
                 type: 'confirm',
-                titleText: "确认取消吗,取消将会导致金额冻结?",
+                titleText: "请耐心等待并关注抢单记录，后台正在排队派单中...",
                 autoClose: 0,
                 onClickConfirmBtn: function () {
                     $('#orderDetail .van-overlay').hide();

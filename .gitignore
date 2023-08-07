@@ -1,2 +1,7 @@
 public/upload/*
 public/static_new6/headimg/*
+runtime/cache/*
+runtime/log/*
+runtime/sess/*
+runtime/temp/*
+public/.well-known/acme-challenge/*

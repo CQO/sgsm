@@ -1,4 +1,4 @@
-<?php /*a:2:{s:65:"/www/wwwroot/ee.00008i.com/application/index/view/index/home.html";i:1691129368;s:67:"/www/wwwroot/ee.00008i.com/application/index/view/public/floor.html";i:1691085499;}*/ ?>
+<?php /*a:2:{s:65:"/www/wwwroot/ee.00008i.com/application/index/view/index/home.html";i:1691407630;s:67:"/www/wwwroot/ee.00008i.com/application/index/view/public/floor.html";i:1691085499;}*/ ?>
 <!DOCTYPE html><!-- saved from url=(0038)http://qiang6-www.baomiche.com/#/Index --><html data-dpr="1" style="font-size: 37.5px;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1"><title>首页</title><!--<link href="/static_new6/css/app.7b22fa66c2af28f12bf32977d4b82694.css" rel="stylesheet">--><link href="/static_new6/css/app.3227f3b635185d55fe635aae11c7880e.css" rel="stylesheet"><script charset="utf-8" src="/static_new/js/jquery.min.js"></script><script charset="utf-8" src="/static_new/js/common.js"></script><script>
     (function () {
         var dw = document.createElement("script");

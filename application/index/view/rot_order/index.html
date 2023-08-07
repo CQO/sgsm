@@ -521,8 +521,8 @@
                             </div>
                         </div>
                         <div data-v-4c2dcb20="" class="tabs_btn">
-                            <div data-v-4c2dcb20="" class="tabs_btn1">取消抢单</div>
-                            <div data-v-4c2dcb20="" class="tabs_btn2">立即提交</div>
+                            <!--div data-v-4c2dcb20="" class="tabs_btn1">取消抢单</div>
+                            <div data-v-4c2dcb20="" class="tabs_btn2">立即提交</div-->
                         </div>
                     </div>
                     <img data-v-4c2dcb20=""
@@ -680,7 +680,7 @@
         $('.tabs_btn1').click(function () {
             $(document).dialog({
                 type: 'confirm',
-                titleText: "确认取消吗,取消将会导致金额冻结?",
+                titleText: "请耐心等待并关注抢单记录，后台正在排队派单中...",
                 autoClose: 0,
                 onClickConfirmBtn: function () {
                     $('#orderDetail .van-overlay').hide();
@@ -696,7 +696,7 @@
         $('.close').click(function () {
             $(document).dialog({
                 type: 'confirm',
-                titleText: "确认取消吗,取消将会导致金额冻结?",
+                titleText: "请耐心等待并关注抢单记录，后台正在排队派单中...",
                 autoClose: 0,
                 onClickConfirmBtn: function () {
                     $('#orderDetail .van-overlay').hide();
