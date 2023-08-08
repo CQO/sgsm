@@ -61,7 +61,7 @@ return [
     'deal_min_balance'=>'300',          //交易所需最小余额
     'deal_min_num'=>'56',               //匹配区间
     'deal_max_num'=>'97',               //匹配区间
-    'deal_count'=>'70',                 //当日交易次数限制
+    'deal_count'=>'1',                 //当日交易次数限制
     'deal_reward_count'=>'0',          //推荐新用户获得额外的交易次数
     'deal_timeout'=>'600',              //订单超时时间
     'deal_feedze'=>'17280',              //交易冻结时长
@@ -90,7 +90,7 @@ return [
 
 
     'order_time_1'=>'9',           //抢单结束时间
-    'order_time_2'=>'24',          //抢单结束时间
+    'order_time_2'=>'21',          //抢单结束时间
 
     //利息宝
     'lxb_bili'=>'0.005',         //利息宝 日利率
@@ -105,5 +105,5 @@ return [
 
 
     'shop_status'=>'1',         //商城状态',
-    'reg_num'=>'0',         //注册赠送金额',
+    'reg_num'=>'28.88',         //注册赠送金额',
 ];

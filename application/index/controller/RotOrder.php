@@ -75,7 +75,7 @@ class RotOrder extends Base
 
         $res = check_time(config('order_time_1'),config('order_time_2'));
         $str = config('order_time_1').":00  - ".config('order_time_2').":00";
-        if($res) return json(['code'=>1,'info'=>'禁止在'.$str.'以外的时间段执行当前操作!']);
+        // if($res) return json(['code'=>1,'info'=>'禁止在'.$str.'以外的时间段执行当前操作!']);
 
         $uid = session('user_id');
         $add_id = db('xy_member_address')->where('uid',$uid)->value('id');//获取收款地址信息

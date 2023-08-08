@@ -110,9 +110,9 @@ class Deal extends Controller
         if (empty($oinfo)) {
             return $this->error('订单不存在!');
         }
-        if ( $oinfo['status'] != 6 ) {
-            return $this->error('仅允许替换预派送订单!');
-        }
+        // if ( $oinfo['status'] != 6 ) {
+        //     return $this->error('仅允许替换预派送订单!');
+        // }
 
         $uinfo = Db::name('xy_users')->field('id,level')->find($oinfo['uid']);
         $level = $uinfo['level'];

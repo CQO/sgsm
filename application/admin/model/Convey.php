@@ -138,7 +138,8 @@ class Convey extends Model
         $num = mt_rand($min, $max); //随机交易额
         $goods = Db::name('xy_goods_list')
             ->orderRaw('rand()')
-            ->where('goods_price', 'between', [$num / 10, $num])
+            ->where('goods_price', 'between', [0, $num])
+            ->where('status', '=', 1)
             ->where('cid', '=', $cid)
             ->find();
 
@@ -147,10 +148,11 @@ class Convey extends Model
             die;
         }
 
-        $count = round($num / $goods['goods_price']); //
-        if ($count * $goods['goods_price'] < $min || $count * $goods['goods_price'] > $max) {
-            self::rand_order($min, $max, $cid);
-        }
+        // $count = round($num / $goods['goods_price']); //
+        // if ($count * $goods['goods_price'] < $min || $count * $goods['goods_price'] > $max) {
+        //     self::rand_order($min, $max, $cid);
+        // }
+        $count = 1;
         return ['count' => $count, 'id' => $goods['id'], 'num' => $count * $goods['goods_price'], 'cid' => $goods['cid']];
     }
 

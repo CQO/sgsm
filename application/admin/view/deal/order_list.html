@@ -113,6 +113,7 @@
             </td>
             <td class='text-left nowrap'>
                 {if $vo.status==0}
+                <button class='layui-btn layui-btn-sm layui-btn-primary' onclick="op_search('{$vo.id}')">替换</button>
                 <a data-csrf="{:systoken('admin/deal/do_user_order')}" class="layui-btn layui-btn-xs layui-btn" data-action="{:url('do_user_order')}" data-value="id#{$vo.id};status#3" >强制付款</a>
                 <a data-csrf="{:systoken('admin/deal/do_user_order')}" class="layui-btn layui-btn-xs layui-btn-warm" data-action="{:url('do_user_order')}" data-value="id#{$vo.id};status#4" >取消订单</a>
                 {/if}
