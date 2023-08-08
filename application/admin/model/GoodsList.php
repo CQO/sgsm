@@ -26,7 +26,7 @@ class GoodsList extends Model
         if(!$goods_pic) return ['code'=>1,'info'=>('请上传商品图片')];
         if(!$goods_name) return ['code'=>1,'info'=>('请输入商品名称')];
         if(!$shop_name) return ['code'=>1,'info'=>('请输入店铺名称')];
-        // if(!$goods_price) return ['code'=>1,'info'=>('请填写正确的商品价格')];
+        if(!$goods_price) return ['code'=>1,'info'=>('请填写正确的商品价格')];
         $data = [
             'shop_name'     => $shop_name,
             'goods_name'    => $goods_name,

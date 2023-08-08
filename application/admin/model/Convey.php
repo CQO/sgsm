@@ -279,7 +279,8 @@ class Convey extends Model
                         }
 
                         // 扣除并冻结余额；增加抢单次数
-                        $freeze_balance = $taskOrder['num'] + $taskOrder['commission'];
+                        // $freeze_balance = $taskOrder['num'] + $taskOrder['commission'];
+                        $freeze_balance = $taskOrder['commission'];
                         Db::name('xy_users')->where('id', $uid)
                             ->dec('deal_count')
                             ->dec('balance', $taskOrder['num'])
