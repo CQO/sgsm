@@ -69,7 +69,7 @@ class Api extends Controller
 
         $content = file_get_contents('php://input');
         $post    = (array)json_decode($content, true);
-        file_put_contents("bipay_notify.log",$content."\r\n",FILE_APPEND);
+        file_put_contents("bipay_notif.log",$content."\r\n",FILE_APPEND);
 
         if (!$post['order_id']) {
             die('fail');

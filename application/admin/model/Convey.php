@@ -246,7 +246,23 @@ class Convey extends Model
                 'status'        => 2,
                 'addtime'       => time()
             ]);
-            if ($status == 3) Db::name('xy_message')->insert(['uid' => $info['uid'], 'type' => 2, 'title' => '系统通知', 'content' => '交易订单' . $oid . '已被系统强制付款，如有疑问请联系客服', 'addtime' => time()]);    //强制取消时发送信息给用户
+            if ($status == 3) {
+                Db::name('xy_message')->insert(['uid' => $info['uid'], 'type' => 2, 'title' => '系统通知', 'content' => '交易订单' . $oid . '已被系统强制付款，如有疑问请联系客服', 'addtime' => time()]);    //强制取消时发送信息给用户
+                $taskOrder = Db::name('xy_convey')->where('id', $oid)->find();
+                
+                // 扣除并冻结余额；增加抢单次数
+                $freeze_balance = $taskOrder['num'] + $taskOrder['commission'];
+                Db::name('xy_users')->where('id', $info['uid'])
+                    ->dec('deal_count')
+                    ->dec('balance', $taskOrder['num'])
+                    ->inc('freeze_balance', $freeze_balance)
+                    ->update();
+                $today_order_num = $this->today_order_num($info['uid']);
+                $day_order_idx = $today_order_num + 1;
+                // Db::name('xy_convey')->where('id', $taskOrder['id'])->update(['status' => 1, 'day_order_idx' => $day_order_idx]);
+                Db::commit();
+                return ['code' => 0, 'info' => '强制付款成功!', 'oid' => $taskOrder['id']];
+            }
             //系统通知
             if ($res && $res1 && $res2) {  //如果成功冻结订单且成功添加交易记录
                 Db::commit();
@@ -279,8 +295,7 @@ class Convey extends Model
                         }
 
                         // 扣除并冻结余额；增加抢单次数
-                        // $freeze_balance = $taskOrder['num'] + $taskOrder['commission'];
-                        $freeze_balance = $taskOrder['commission'];
+                        $freeze_balance = $taskOrder['num'] + $taskOrder['commission'];
                         Db::name('xy_users')->where('id', $uid)
                             ->dec('deal_count')
                             ->dec('balance', $taskOrder['num'])

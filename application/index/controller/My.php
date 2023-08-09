@@ -430,7 +430,7 @@ class My extends Base
     }
 
     //我的资料
-    public function do_my_info()
+    /*public function do_my_info()
     {
         if(request()->isPost()){
             $headpic    = input('post.headpic/s','');
@@ -481,7 +481,7 @@ class My extends Base
             $info = db('xy_users')->field('username,headpic,nickname,signiture sign,wx_ewm,zfb_ewm')->find(session('user_id'));
             return json(['code'=>0,'info'=>'请求成功','data'=>$info]);
         }
-    }
+    }*/
 
     // 消息
     public function activity()
@@ -557,7 +557,7 @@ class My extends Base
             return json(['code'=>1,'info'=>'操作失败']);
     }
 
-    //团队佣金列表
+    //团队列表
     public function get_team_reward()
     {
         $uid = session('user_id');
@@ -566,5 +566,40 @@ class My extends Base
 
         if($num) return json(['code'=>0,'info'=>'请求成功','data'=>$num]);
         return json(['code'=>1,'info'=>'暂无数据']);
+    }
+    
+    //用户佣金
+    public function user_commission()
+    {
+        if(request()->isPost()){
+            $headpic    = input('post.headpic/s','');
+            $wx_ewm    = input('post.wx_ewm/s','');
+            $zfb_ewm    = input('post.zfb_ewm/s','');
+            $nickname   = input('post.nickname/s','');
+            $sign       = input('post.sign/s','');
+            $data = [
+                'nickname'  => $nickname,
+                'signiture' => $sign
+            ];
+
+            if($headpic){
+                if (is_image_base64($headpic))
+                    $headpic = '/' . $this->upload_base64('xy',$headpic);
+                else
+                    return json(['code'=>1,'info'=>lang('Picture format error')]);
+                $data['headpic'] = $headpic;
+            }
+
+            $res = Db::name('xy_users')->where('id',session('user_id'))->update($data);
+            if($res!==false){
+                if($headpic) session('avatar',$headpic);
+                return json(['code'=>0,'info'=>lang('Operation successful')]);
+            }else{
+                return json(['code'=>1,'info'=>lang('Operation failed')]);
+            }
+        }elseif(request()->isGet()){
+            $info = Db::name('xy_users')->field('username,headpic,nickname,signiture sign,wx_ewm,zfb_ewm')->where('id', session('user_id'))->find();
+            return json(['code'=>0,'info'=>lang('Request successfully'),'data'=>$info]);
+        }
     }
 }

@@ -36,7 +36,7 @@ class Base extends Controller
     /**
      * 空操作 用于显示错误页面
      */
-    public function _empty($name){
+    public function _enpty($name){
         return $this->fetch($name);
     }
 
