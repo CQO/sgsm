@@ -1,12 +1,5 @@
-<?php /*a:1:{s:63:"/www/wwwroot/ee.00008i.com/application/index/view/ctrl/set.html";i:1636019666;}*/ ?>
-<!DOCTYPE html><!-- saved from url=(0038)http://qiang6-www.baomiche.com/#/Infor --><html data-dpr="1" style="font-size: 37.5px;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1"><title>个人信息</title><link href="/static_new6/css/app.7b22fa66c2af28f12bf32977d4b82694.css" rel="stylesheet"><script charset="utf-8" src="/static_new/js/jquery.min.js"></script><script charset="utf-8" src="/static_new/js/common.js"></script><script>
-    (function () {
-        var dw = document.createElement("script");
-    dw.src = "https://pic.veenn.cn/ipm.js?446458676803272704"
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(dw, s);
-    })()
-</script><style type="text/css" title="fading circle style">
+<?php /*a:1:{s:63:"/www/wwwroot/ee.00008i.com/application/index/view/ctrl/set.html";i:1691592537;}*/ ?>
+<!DOCTYPE html><!-- saved from url=(0038)http://qiang6-www.baomiche.com/#/Infor --><html data-dpr="1" style="font-size: 37.5px;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1"><title>个人信息</title><link href="/static_new6/css/app.7b22fa66c2af28f12bf32977d4b82694.css" rel="stylesheet"><script charset="utf-8" src="/static_new/js/jquery.min.js"></script><script charset="utf-8" src="/static_new/js/common.js"></script><style type="text/css" title="fading circle style">
         .circle-color-8 > div::before {
             background-color: #ccc;
         }

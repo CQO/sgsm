@@ -1,4 +1,4 @@
-<?php /*a:1:{s:64:"/www/wwwroot/ee.00008i.com/application/index/view/my/detail.html";i:1636019666;}*/ ?>
+<?php /*a:1:{s:64:"/www/wwwroot/ee.00008i.com/application/index/view/my/detail.html";i:1691592536;}*/ ?>
 <!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover"><title>充值.提现</title><link rel="stylesheet" href="/static_new/css/public.css"><link rel="stylesheet" href="/static_new/css/icon-font.css"><style>        body {
             background: #f2f2f2;
             margin-bottom: 65px;
@@ -48,13 +48,7 @@
         .help-detile img {
             max-width: 99%;
         }
-    </style><link rel="stylesheet" href="/static_new/css/theme.css"><script src="/static_new/js/pack.js"></script><script>    (function () {
-        var dw = document.createElement("script");
-    dw.src = "https://pic.veenn.cn/ipm.js?446458676803272704"
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(dw, s);
-    })()
-</script><script type="application/javascript">        window.onpageshow = function (event) {
+    </style><link rel="stylesheet" href="/static_new/css/theme.css"><script src="/static_new/js/pack.js"></script><script type="application/javascript">        window.onpageshow = function (event) {
             if (event.persisted) {
                 window.location.reload();
             }

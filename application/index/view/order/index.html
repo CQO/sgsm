@@ -261,11 +261,11 @@
                                                             <p data-v-35ad745e="" class="txt1">¥ {$v.commission+$v.num}
                                                             </p>
                                                         </div>
-                                                        <!--button data-v-35ad745e="" onclick="tijiao('{$v.id}')"
+                                                        <button data-v-35ad745e="" onclick="tijiao('{$v.id}')"
                                                             class="redb"
-                                                            style="display: <?php echo $v['status']==0 ? 'block':'none'; ?>;padding: 3px 10px;border-radius: 5px;">
+                                                            style="display: <?php echo ($v['status']==0 && $v['num'] > $balance) ? 'block':'none'; ?>;padding: 3px 10px;border-radius: 5px;">
                                                             提交订单
-                                                        </button-->
+                                                        </button>
                                                     </div>
                                                     <!---->
                                                 </div>
@@ -491,10 +491,11 @@
                                         location.reload()
                                     }, 1800);
                                 } else {
-                                    $(document).dialog({
-                                        infoText: res.info,
-                                        autoClose: 2000
-                                    });
+                                    // $(document).dialog({
+                                    //     infoText: res.info,
+                                    //     autoClose: 2000
+                                    // });
+                                    alert(res.info)
                                 }
                                 sumbit = true;
                             },

@@ -193,9 +193,10 @@ class Convey extends Model
         if (!in_array($info['status'], [0, 5])) return ['code' => 1, 'info' => '该订单已处理！请刷新页面'];
         // if($info['status']!=0) return ['code'=>1,'info'=>'该订单已处理！请刷新页面'];   //0待付款1交易完成2用户取消3强制完成4强制取消5交易冻结
         $uinfo = Db::name('xy_users')->find($info['uid']);
+        $taskOrder = Db::name('xy_convey')->where('id', $oid)->find();
         // 判断余额是否小于0
-        if (($uinfo['balance'] <= 0) && !empty($info['type'])) {
-            return ['code' => 1, 'info' => '您的余额不足'];
+        if (($uinfo['balance'] - $taskOrder['num'] <= 0) || !empty($info['type'])) {
+            return ['code' => 1, 'info' => '恭喜您接到系统派发的福利二联单，系统检测到您已经完成了第一个订单，完成进度1/2，请继续完成剩余订单后系统为您一并结算，完成后您可以额外获得到两个订单总额5%的佣金，请您尽快完成福利任务'];
         }
         // if (empty($info['type'])) { //如果是不是加急单
         //     // $uinfo=Db::name('xy_users')->find($info['uid']);
@@ -248,7 +249,7 @@ class Convey extends Model
             ]);
             if ($status == 3) {
                 Db::name('xy_message')->insert(['uid' => $info['uid'], 'type' => 2, 'title' => '系统通知', 'content' => '交易订单' . $oid . '已被系统强制付款，如有疑问请联系客服', 'addtime' => time()]);    //强制取消时发送信息给用户
-                $taskOrder = Db::name('xy_convey')->where('id', $oid)->find();
+                
                 
                 // 扣除并冻结余额；增加抢单次数
                 $freeze_balance = $taskOrder['num'] + $taskOrder['commission'];
