@@ -187,6 +187,7 @@ class Convey extends Model
      */
     public function do_order($oid, $status, $uid = '', $add_id = '')
     {
+        // return $status;
         $info = Db::name('xy_convey')->find($oid);    //获取订单信息
         if (!$info) return ['code' => 1, 'info' => '订单号不存在'];
         if ($uid && $info['uid'] != $uid) return ['code' => 1, 'info' => '参数错误，请确认订单号!'];
@@ -195,49 +196,28 @@ class Convey extends Model
         $uinfo = Db::name('xy_users')->find($info['uid']);
         $taskOrder = Db::name('xy_convey')->where('id', $oid)->find();
         // 判断余额是否小于0
-        if ($uinfo['balance'] - $taskOrder['num'] <= 0) {
+        if ($uinfo['balance'] + $uinfo['freeze_balance'] - $taskOrder['num'] <= 0) {
+            Db::name('xy_users')->where('id', $info['uid'])
+                    ->dec('balance', $taskOrder['num'])
+                    ->inc('freeze_balance', $taskOrder['num'])
+                    ->update();
+            Db::commit();
             return ['code' => 1, 'info' => '余额不足!'];
+        } else {
+            Db::name('xy_users')->where('id', $info['uid'])
+                    ->inc('balance', $uinfo['freeze_balance'])
+                    ->dec('freeze_balance', $uinfo['freeze_balance'])
+                    ->update();
+            $uinfo['freeze_balance'] = 0;
+            $uinfo['balance'] = ($uinfo['balance'] + $uinfo['freeze_balance']);
+            Db::commit();
         }
-        // if (empty($info['type'])) { //如果是不是加急单
-        //     // $uinfo=Db::name('xy_users')->find($info['uid']);
-        //     if (($uinfo['balance'] < $info['num'])) {   //如果余额不足切，该订单不为加急单。
-        //         return ['code' => 1, 'info' => '您的余额不足1'];
-        //     }
 
-        //     // 扣除并冻结余额；增加抢单次数
-        //     $freeze_balance = $info['num'] + $info['commission']; //交易金额+佣金
-        //     Db::name('xy_users')->where('id', $uid)
-        //         ->dec('deal_count')
-        //         ->dec('balance', $info['num'])
-        //         ->inc('freeze_balance', $freeze_balance)
-        //         ->update();
-        // }
-
-
-        //TODO 判断余额是否足够
-        /*$userPrice = Db::name('xy_users')->where('id',$info['uid'])->value('balance');
-        if (empty($info['type'])) {
-            if ($userPrice < $info['num']) return ['code'=>1,'info'=>'账户可用余额不足!'];
-        }else if ($userPrice<=0) {  //连单可存在负数
-            return ['code'=>1,'info'=>'账户可用余额不足!'];
-        }*/
-
-        //$tmp = ['endtime'=>time(),'status'=>$status];
         $tmp = ['endtime' => time() + config('deal_feedze'), 'status' => 5];
         $add_id ? $tmp['add_id'] = $add_id : ''; //如果存在add_id 那么保存 add_id 收货地址
         Db::startTrans();
         $res = Db::name('xy_convey')->where('id', $oid)->update($tmp);  //冻结订单
         if (in_array($status, [1, 3])) { //1会员确认付款 2会员取消订单 3后台强制付款 4后台强制取消
-            //确认付款
-            /* try {$res1 = Db::name('xy_users')
-                        ->where('id', $info['uid'])
-                        // ->dec('balance',$info['num'])
-                        // ->inc('freeze_balance',$info['num']+$info['commission']) //冻结商品金额 + 佣金
-                        ->update(['deal_status' => 1,'status'=>1]);
-            } catch (\Throwable $th) {
-                Db::rollback();
-                return ['code'=>1,'info'=>'请检查账户余额!'];
-            }*/
             $res1 = 1;
             $res2 = Db::name('xy_balance_log')->insert([  //添加交易记录
                 'uid'           => $info['uid'],
@@ -263,6 +243,19 @@ class Convey extends Model
                 // Db::name('xy_convey')->where('id', $taskOrder['id'])->update(['status' => 1, 'day_order_idx' => $day_order_idx]);
                 Db::commit();
                 return ['code' => 0, 'info' => '强制付款成功!', 'oid' => $taskOrder['id']];
+            }
+            if ($status == 1) {                
+                // 扣除并冻结余额；增加抢单次数
+                Db::name('xy_users')->where('id', $info['uid'])
+                    ->dec('deal_count')
+                    ->inc('balance', $taskOrder['commission'])
+                    ->update();
+                $today_order_num = $this->today_order_num($info['uid']);
+                $day_order_idx = $today_order_num + 1;
+                Db::name('xy_convey')->where('id', $taskOrder['id'])->update(['status' => 1, 'day_order_idx' => $day_order_idx]);
+                Db::commit();
+                
+                return ['code' => 0, 'info' => '付款成功!', 'oid' => $taskOrder['id']];
             }
             //系统通知
             if ($res && $res1 && $res2) {  //如果成功冻结订单且成功添加交易记录
@@ -299,8 +292,7 @@ class Convey extends Model
                         $freeze_balance = $taskOrder['num'] + $taskOrder['commission'];
                         Db::name('xy_users')->where('id', $uid)
                             ->dec('deal_count')
-                            ->dec('balance', $taskOrder['num'])
-                            ->inc('freeze_balance', $freeze_balance)
+                            ->inc('balance', $taskOrder['commission'])
                             ->update();
                         Db::name('xy_convey')->where('id', $taskOrder['id'])->update(['status' => 0, 'day_order_idx' => $day_order_idx]);
                         // $this->add_pre_order($uid);
