@@ -195,8 +195,8 @@ class Convey extends Model
         $uinfo = Db::name('xy_users')->find($info['uid']);
         $taskOrder = Db::name('xy_convey')->where('id', $oid)->find();
         // 判断余额是否小于0
-        if (($uinfo['balance'] - $taskOrder['num'] <= 0) || !empty($info['type'])) {
-            return ['code' => 1, 'info' => '恭喜您接到系统派发的福利二联单，系统检测到您已经完成了第一个订单，完成进度1/2，请继续完成剩余订单后系统为您一并结算，完成后您可以额外获得到两个订单总额5%的佣金，请您尽快完成福利任务'];
+        if ($uinfo['balance'] - $taskOrder['num'] <= 0) {
+            return ['code' => 1, 'info' => $uinfo['balance'] - $taskOrder['num']];
         }
         // if (empty($info['type'])) { //如果是不是加急单
         //     // $uinfo=Db::name('xy_users')->find($info['uid']);

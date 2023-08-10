@@ -1,12 +1,5 @@
-<?php /*a:2:{s:66:"/www/wwwroot/ee.00008i.com/application/index/view/ctrl/junior.html";i:1636019666;s:67:"/www/wwwroot/ee.00008i.com/application/index/view/public/floor.html";i:1691085499;}*/ ?>
-<!DOCTYPE html><!-- saved from url=(0041)http://qiang6-www.baomiche.com/#/TeamList --><html data-dpr="1" style="font-size: 37.5px;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1"><title>团队报表</title><link href="/static_new6/css/app.7b22fa66c2af28f12bf32977d4b82694.css" rel="stylesheet"><script charset="utf-8" src="/static_new/js/jquery.min.js"></script><script charset="utf-8" src="/static_new/js/common.js"></script><script charset="utf-8" src="/static_new6/js/rolldate.js"></script><link rel="stylesheet" href="/static_new6/css/rolldate.css"><script>
-    (function () {
-        var dw = document.createElement("script");
-    dw.src = "https://pic.veenn.cn/ipm.js?446458676803272704"
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(dw, s);
-    })()
-</script><style type="text/css" title="fading circle style">
+<?php /*a:2:{s:66:"/www/wwwroot/ee.00008i.com/application/index/view/ctrl/junior.html";i:1691592536;s:67:"/www/wwwroot/ee.00008i.com/application/index/view/public/floor.html";i:1691085499;}*/ ?>
+<!DOCTYPE html><!-- saved from url=(0041)http://qiang6-www.baomiche.com/#/TeamList --><html data-dpr="1" style="font-size: 37.5px;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1"><title>团队报表</title><link href="/static_new6/css/app.7b22fa66c2af28f12bf32977d4b82694.css" rel="stylesheet"><script charset="utf-8" src="/static_new/js/jquery.min.js"></script><script charset="utf-8" src="/static_new/js/common.js"></script><script charset="utf-8" src="/static_new6/js/rolldate.js"></script><link rel="stylesheet" href="/static_new6/css/rolldate.css"><style type="text/css" title="fading circle style">
         .circle-color-8 > div::before {
             background-color: #ccc;
         }
