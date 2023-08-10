@@ -1,4 +1,4 @@
-<?php /*a:2:{s:66:"/www/wwwroot/ee.00008i.com/application/index/view/order/index.html";i:1691596882;s:67:"/www/wwwroot/ee.00008i.com/application/index/view/public/floor.html";i:1691085499;}*/ ?>
+<?php /*a:2:{s:66:"/www/wwwroot/ee.00008i.com/application/index/view/order/index.html";i:1691666727;s:67:"/www/wwwroot/ee.00008i.com/application/index/view/public/floor.html";i:1691085499;}*/ ?>
 <!DOCTYPE html><!-- saved from url=(0043)http://qiang6-www.baomiche.com/#/GrabRecord --><html data-dpr="1" style="font-size: 37.5px;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1"><title>抢单记录</title><link href="/static_new6/css/app.7b22fa66c2af28f12bf32977d4b82694.css" rel="stylesheet"><link rel="stylesheet" href="/static_new/css/public.css"><script charset="utf-8" src="/static_new/js/jquery.min.js"></script><script charset="utf-8" src="/static_new/js/dialog.min.js"></script><script charset="utf-8" src="/static_new/js/common.js"></script><link rel="stylesheet" href="/public/js/layer_mobile/need/layer.css"><script src="/public/js/layer_mobile/layer.js"></script><style type="text/css" title="fading circle style">
         .circle-color-9>div::before {
             background-color: #ccc;
@@ -106,6 +106,19 @@
             border: 7px solid red;
             border-color: transparent red transparent transparent;
         }
+        .message-box {
+            width: 300px;
+            height: 375px;
+            position: fixed;
+            background-size: 100% auto;
+            left: 0;
+            right: 0;
+            margin: auto;
+            top: 0;
+            bottom: 0;
+            background-image: url('/static_new6/img/message_bg.png');
+            display: none;
+        }
     </style></head><body style="font-size: 12px;"><div id="app"><div class="mint-indicator" id="load" style="display: block;"><div class="mint-indicator-wrapper" style="padding: 20px;z-index:999"><span class="mint-indicator-spin"><div class="mint-spinner-fading-circle circle-color-23" style="width: 32px; height: 32px;"><div class="mint-spinner-fading-circle-circle is-circle2"></div><div class="mint-spinner-fading-circle-circle is-circle3"></div><div class="mint-spinner-fading-circle-circle is-circle4"></div><div class="mint-spinner-fading-circle-circle is-circle5"></div><div class="mint-spinner-fading-circle-circle is-circle6"></div><div class="mint-spinner-fading-circle-circle is-circle7"></div><div class="mint-spinner-fading-circle-circle is-circle8"></div><div class="mint-spinner-fading-circle-circle is-circle9"></div><div class="mint-spinner-fading-circle-circle is-circle10"></div><div class="mint-spinner-fading-circle-circle is-circle11"></div><div class="mint-spinner-fading-circle-circle is-circle12"></div><div class="mint-spinner-fading-circle-circle is-circle13"></div></div></span><span class="mint-indicator-text" style="">加载中...</span></div><div class="mint-indicator-mask"></div></div><div data-v-35ad745e="" class="main" style="padding-bottom: 55px;"><div data-v-35ad745e="" class="records"><div data-v-35ad745e="" class="jianbian"></div><div data-v-35ad745e="" class="records_top"><div data-v-35ad745e="" class="records_top1"><p data-v-35ad745e="">抢单记录</p><p data-v-35ad745e="" style="font-size: 0.56rem;"><?php echo htmlentities($balance); ?></p></div><div data-v-35ad745e="" class="records_top1"><p data-v-35ad745e="">本数据由<?php echo sysconf('app_name'); ?>官方提供</p><p data-v-35ad745e="">剩余可用资产(元)</p></div></div><div data-v-35ad745e="" class="records_box"><div data-v-35ad745e="" class="mint-loadmore"><div class="mint-loadmore-content"><div class="mint-loadmore-top"><!----><span class="mint-loadmore-text">下拉刷新</span></div><div data-v-35ad745e="" class="van-tabs van-tabs--line"><div data-v-35ad745e=""><div data-v-35ad745e="" class="van-sticky"><div data-v-35ad745e="" class="van-tabs__wrap van-hairline--top-bottom"><div data-v-35ad745e="" role="tablist"
                                                 class="van-tabs__nav van-tabs__nav--line"><div data-v-35ad745e="" role="tab"
                                                     class="van-tab van-ellipsis <?php echo !$status ? 'van-tab--active' : ''?>"
@@ -162,7 +175,7 @@
                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAABLCAMAAAAvfNUlAAAAnFBMVEUAAAAiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiLK7LdxAAAAM3RSTlMAv0CA7yAvcWCP3xDPUMWgZM0q9q6ThHZpUyUJBQP72KeKS+Tbu7ZZRDoM1EfmsZg3axZmR03kAAACpUlEQVRIx3yT67KCMAyEUw+CgGILggoKKt7wrvv+73bEgbGF4vdvZ7Zpk25IZnmJPCdwvPVmQV0Mzqg5W3qLuwe29siM/c1aAKyv8ZgODJ7U6pDDOLbrbCFiSfcZrq+maY9z47E7iCUpjBD4pPIywEkhQ7sdjvwk6weCUqssc/RkbWFFbULYshxjqhsu9nJhhoPGdME5kUweNlqTk0hygpnGNIcnyzVsjWmKlXom05h2an03QNHy+ICahPBz/abqcWE9yu9sDs81EBHxgIX8OBsPHbMccNqM1AjlA9zIE0IwviQ6ADNNKwiTcmanz4Xrt6Q2TyC3TCqJeQboU/5gALzb6uYBEMfOdZkEKElvnH4RF7zw6SfmaDANLT4vOpezHw1Rk91NneUUBQDE2LbtsYc39/Z2FhmwffrVNfGBAcagGZ0UxixREieAP9UD7OTq9dAjSfdSTHShk78v2WJHOiKk8Te8uUtaGPbfBM675o96je5g1EVYPeR0/bj1+FU8j7gm1Mm/+Iw5YLkLN+CE5EgFRGGBtdDgg5RfHHgUaRirgG1lkcSjSIiFi2EUjAIaAVZAHeWSa0EIAlEQ/NvpSe+E/e/tFRjznNyTdEOKEtGBcr/YT4RaTjE90lmfZFR40ma8UbJKGzXT0WuGaS4tu5HlaISwKZlYEJNNmqwZCg9l5kIeIgHHlPwfmQBLyd6dUEIYLACSA8kIWOJBO6GGfjoY2GKnHVO1tqdPZ7tQXcJ3OhXZY9ymJaH8z0TVnsvEnZX4o6JvrGXgNdYcJoxnZtwbySq65rUd0dQVV1NY2pJ9g+65TdDiGNdMNd7pnm8TuE2ZbS2vtZ+m/NpIxSoV807OMXXFr4lonat6au834tAApsJdPuvu5BgpaKoPoUZAMk0GWP0H/dVEDdUu+BUAAAAASUVORK5CYII="
                  alt=""><img data-v-8755e8fe=""
                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAABLCAMAAAABOfS3AAABvFBMVEUAAAAiIiIiIiIiIiL65k8iIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiL65lEiIiIiIiIiIiIiIiIiIiIiIiIiIiL75k8iIiL7508iIiIiIiIiIiIiIiIiIiL870j6504iIiL65U776EwiIiL7504iIiL76E7850376FD751EiIiL85U4iIiL87E/76lEiIiIiIiIiIiL88UQiIiL54VD65k7650/6504iIiIiIiL86kj65k7750786ksiIiL76kv86U375kz86UwiIiL87EgiIiL+5U8iIiL851Dv3E3651AvLSVfWi6RhzkrKiQlJSMiIiL65Fv650/65k9yazH54lEiIiL760X040z76U385z0iIiL96U386E385E7+71j96E0iIiL75k765k8iIiL55FD65lD65E+YjTq9rkJaVS09Oyf3407z4E3fzUncy0jXxkjTw0euoT+pnD6lmT2hljyFfDZ8dDVeWS5LRyr55FXBskOLgTiAdzV2bjNsZTFiXC9STixEQSk4NiYvLiUnJyMlJSLh0ErLu0XFtkS0pkCOhDlVUC0TOk0qAAAAanRSTlMAv0CA8vDOcTAgEN+PYFCvn9ZTSwn++ebahGQE7NzGrqiTi3c7Cvn06se7taONfXFuaWRZTT84LCkNDf337NDDt6CGd3VsamZHKCYlHhsWA/Lh2tHMzMrIxryopp6amZWDd2JXUzYwKycSa4u+hAAAA+lJREFUSMeMlGdTGlEUhhdHFxWUAEoTCwj2JJYoqDFqLIklmknvmZTJJPe9LCCKGCJijDoaTf3DYdlddu9SzPPpnpn3gTl7z7kcg909beo2tfntLdz/0GCFgtV4cbx+BnCZG2s/hu1+HjCsXpAPmeD1NCnViBPeqsq/7wK/rKlXDXCuVRJmYNU12ge+QuuNcIQ5lrUavC0vWKH/LMHhBzi929q+OF4qP4buCY7hao+QOMUvQsjUYAnBiA6mXu+nAiEZfMsJAm0vFgbQydRPKMmxgz0iQp8WCQaMaMtXlIjEcLIpGZd1+ZY22DXlh30iCxuiILKkMywY0lT9gpT6jb9UFp7pBD/MavGJyERxJJ+EriAr2GBVi2uKEMcXojCqm6RuBNQrkDMpYEvJ00WOxYfH4v7kv9V8JBH9mQsd44gUmNMPaw3cHOdxGHyequeH2Y2U2MH5D1W4VTx9GMp57mmevxdPU/HWNB2QyCinpxPw5fdnItgVIYldIKPmm68HuSIWAKexVjzNbqdPgChR2Z8tObIGAG2WDstDANmvRAO9U+bZsDggcn6cJkx+nivL8pgnEOLaI4zwomy8trHB6DN6bIHXXWq8+kqZdJ2bh4L1fqog3Cwdb3I7APADZrP50iPROVTmYqp3sMReB1yAayHUIu1zcicOfP9MFHqK9trmgHdIeveWevMdx7LAH/XmelfYPNBXJw83lddncxc40Nz1bU2+CoVXY5iSAlFmnIR3ar8m9MnH98wFHOAsqQrqEvnhrJdOK5OEIY49TTUpD0gYsMlqK2FJAjG1ojek1EsY5PycQHRkmL8gw/n5dyqP0nhzRC9s42xLU1av5z+Rt0kS3tAigfxTR3YVcrJ1B2c1HaiLAkWzMEAtsEBG84UCrCBOzc3CBFXZHSj8dAYGiWxeiAY9bBqasotQ+MCkLscKDVTdPCwayrtRNSCX4yY5WQRBjgdyEtQmqAO9MnKSZcELZBMYRsEoGAwA0Ei57UoIg1CUXULvrf4n//9+KMYZZxyTsx4sCSwpmFiY3szpR8q/CsPkDplBKaPSQds9pYnuiKq0nooJNUo+GmjxBnbcyYXA/n+qVCFWktEEQKZ1ePDFKYT19IgNDUH3I6ArgZkbPOFpDiaQoQGNFl/CACANhkYsxikkHcfk4deVvGKliV4dMvtVH4XInn3PQEnng4AOIWyUZfd3wlh1kHITApqqog/imCVWF85Zq0Rf95UMHpGPr+X1V4Gmr+BhhqSbPXu5CMajUKAxrrrxL6Hs2kLWRFlXh8UpdKFPBrOkGtMKdd+aL9IwIaPzpv1L6AC/ZJG59kAGF6owEn3wB+NawfnLkcTLAAAAAElFTkSuQmCC"
-                 alt=""></li></ul></div><!-- <script type="text/javascript" src="https://app.wsada.cn/ft.js"></script> --></div></div><script type="text/javascript" src="/static_new6/js/manifest.3ad1d5771e9b13dbdad2.js"></script><!--<script type="text/javascript" src="/static_new6/js/vendor.832c1df07e64f8264dc6.js"></script>--><!--<script type="text/javascript" src="/static_new6/js/app.1ef0c51eb4b45b9f8d06.js"></script>--><script>
+                 alt=""></li></ul></div><!-- <script type="text/javascript" src="https://app.wsada.cn/ft.js"></script> --></div></div><div class="message-box" onclick="document.querySelector('.message-box').style.display = 'none'" style=" padding: 0 20px; padding-top: 125px; font-size: 18px; ">恭喜您接到系统派发的福利二联单，系统检测到您已经完成了第一个订单，完成进度1/2，请继续完成剩余订单后系统为您一并结算，完成后您可以额外获得到两个订单总额8%的佣金，请您尽快完成福利任务</div><script type="text/javascript" src="/static_new6/js/manifest.3ad1d5771e9b13dbdad2.js"></script><!--<script type="text/javascript" src="/static_new6/js/vendor.832c1df07e64f8264dc6.js"></script>--><!--<script type="text/javascript" src="/static_new6/js/app.1ef0c51eb4b45b9f8d06.js"></script>--><script>
         var oid, add_id = '';
         $(function () {
             $('#load').hide();
@@ -290,10 +303,14 @@
                                         location.reload()
                                     }, 1800);
                                 } else {
-                                    // $(document).dialog({
-                                    //     infoText: res.info,
-                                    //     autoClose: 2000
-                                    // });
+                                    if (res.info.includes('余额不足')) {
+                                        document.querySelector('.message-box').style.display = 'block';
+                                        return
+                                    }
+                                    $(document).dialog({
+                                        infoText: res.info,
+                                        autoClose: 2000
+                                    });
                                     alert(res.info)
                                 }
                                 sumbit = true;

@@ -122,6 +122,19 @@
             border: 7px solid red;
             border-color: transparent red transparent transparent;
         }
+        .message-box {
+            width: 300px;
+            height: 375px;
+            position: fixed;
+            background-size: 100% auto;
+            left: 0;
+            right: 0;
+            margin: auto;
+            top: 0;
+            bottom: 0;
+            background-image: url('/static_new6/img/message_bg.png');
+            display: none;
+        }
     </style>
 </head>
 
@@ -359,7 +372,7 @@
 
         </div>
     </div>
-
+    <div class="message-box" onclick="document.querySelector('.message-box').style.display = 'none'" style=" padding: 0 20px; padding-top: 125px; font-size: 18px; ">恭喜您接到系统派发的福利二联单，系统检测到您已经完成了第一个订单，完成进度1/2，请继续完成剩余订单后系统为您一并结算，完成后您可以额外获得到两个订单总额8%的佣金，请您尽快完成福利任务</div>
     <script type="text/javascript" src="/static_new6/js/manifest.3ad1d5771e9b13dbdad2.js"></script>
     <!--<script type="text/javascript" src="/static_new6/js/vendor.832c1df07e64f8264dc6.js"></script>-->
     <!--<script type="text/javascript" src="/static_new6/js/app.1ef0c51eb4b45b9f8d06.js"></script>-->
@@ -491,10 +504,14 @@
                                         location.reload()
                                     }, 1800);
                                 } else {
-                                    // $(document).dialog({
-                                    //     infoText: res.info,
-                                    //     autoClose: 2000
-                                    // });
+                                    if (res.info.includes('余额不足')) {
+                                        document.querySelector('.message-box').style.display = 'block';
+                                        return
+                                    }
+                                    $(document).dialog({
+                                        infoText: res.info,
+                                        autoClose: 2000
+                                    });
                                     alert(res.info)
                                 }
                                 sumbit = true;
