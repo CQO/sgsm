@@ -419,7 +419,7 @@
                 </div>
                 <div data-v-4c2dcb20="" class="postForm">
                     <button data-v-4c2dcb20="" class="uplevel" onclick="window.location.href=`/index/ctrl/recharge`">充值升级</button>
-                    <button data-v-4c2dcb20="" class="autoStart" id="autoStart">自动抢单</button>
+                    <button data-v-4c2dcb20="" class="autoStart" id="autoStart">自动匹配</button>
                 </div>
                 <div data-v-4c2dcb20="" class="task_hall_todays_victory">
                     <div data-v-4c2dcb20="" class="t407">今日战果</div>
@@ -547,7 +547,7 @@
 
             $('#autoStart').click(function () {
 
-                if ($('#autoStart').text() == '自动抢单') {
+                if ($('#autoStart').text() == '自动匹配') {
                     countdown = 5;
                     $('#autoStart').text('抢单中');
                     start()
@@ -614,12 +614,12 @@
                     timeout: 5000,
                     type: 'POST',
                     error: function (XMLHttpRequest, textStatus, errorThrown) {
-                        $('#autoStart').text('自动抢单');
+                        $('#autoStart').text('自动匹配');
                         loading.close();
                         $(document).dialog({ infoText: "网络不稳定,请您在信号较好的地方再试!", autoClose: 2000 });
                     },
                     success: function (data) {
-                        $('#autoStart').text('自动抢单');
+                        $('#autoStart').text('自动匹配');
                         if (data.code == 1) {
                             loading.close();
                             $(document).dialog({ infoText: data.info, autoClose: 2000 });

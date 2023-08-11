@@ -196,6 +196,9 @@ class Convey extends Model
         $uinfo = Db::name('xy_users')->find($info['uid']);
         $taskOrder = Db::name('xy_convey')->where('id', $oid)->find();
         // 判断余额是否小于0
+        if ($uinfo['balance'] <= 0) {
+            return ['code' => 1, 'info' => '余额不足,请充值!'];
+        }
         if ($uinfo['balance'] + $uinfo['freeze_balance'] - $taskOrder['num'] <= 0) {
             Db::name('xy_users')->where('id', $info['uid'])
                     ->dec('balance', $taskOrder['num'])

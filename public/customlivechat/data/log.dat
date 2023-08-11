@@ -376,3 +376,47 @@ Stack trace:
 /www/wwwroot/ee.00008i.com/public/customlivechat/php/app/Application.php:89 (Application:runAction())
 /www/wwwroot/ee.00008i.com/public/customlivechat/php/app.php:27 (Application:run())
 
+Application path: /customlivechat/php/app.php?department-online
+2023-08-11 11:54:14 [error] SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+Stack trace:
+/www/wwwroot/ee.00008i.com/public/customlivechat/php/service/Database.php:50 (Logger:error())
+/www/wwwroot/ee.00008i.com/public/customlivechat/php/service/Database.php:68 (Database:connect())
+/www/wwwroot/ee.00008i.com/public/customlivechat/php/service/Database.php:28 (Database:reconnect())
+/www/wwwroot/ee.00008i.com/public/customlivechat/php/lib/Service.php:17 (Database:onRegister())
+/www/wwwroot/ee.00008i.com/public/customlivechat/php/lib/ServiceContainer.php:55 (Service:setServiceContainer())
+/www/wwwroot/ee.00008i.com/public/customlivechat/php/lib/Model.php:20 (ServiceContainer:get())
+/www/wwwroot/ee.00008i.com/public/customlivechat/php/model/DepartmentModel.php:26 (Model:__construct())
+/www/wwwroot/ee.00008i.com/public/customlivechat/php/controller/DepartmentController.php:188 (DepartmentModel:repo())
+/www/wwwroot/ee.00008i.com/public/customlivechat/php/app/Application.php:165 (DepartmentController:getOnlineAction())
+/www/wwwroot/ee.00008i.com/public/customlivechat/php/app/Application.php:89 (Application:runAction())
+/www/wwwroot/ee.00008i.com/public/customlivechat/php/app.php:27 (Application:run())
+
+2023-08-11 11:54:14 [error] SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+Stack trace:
+/www/wwwroot/ee.00008i.com/public/customlivechat/php/service/ExceptionHandler.php:23 (Logger:error())
+/www/wwwroot/ee.00008i.com/public/customlivechat/php/app/Application.php:180 (ExceptionHandler:createResponse())
+/www/wwwroot/ee.00008i.com/public/customlivechat/php/app/Application.php:89 (Application:runAction())
+/www/wwwroot/ee.00008i.com/public/customlivechat/php/app.php:27 (Application:run())
+
+Application path: /customlivechat/php/app.php?operator-is-online
+2023-08-11 11:54:14 [error] SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+Stack trace:
+/www/wwwroot/ee.00008i.com/public/customlivechat/php/service/Database.php:50 (Logger:error())
+/www/wwwroot/ee.00008i.com/public/customlivechat/php/service/Database.php:68 (Database:connect())
+/www/wwwroot/ee.00008i.com/public/customlivechat/php/service/Database.php:28 (Database:reconnect())
+/www/wwwroot/ee.00008i.com/public/customlivechat/php/lib/Service.php:17 (Database:onRegister())
+/www/wwwroot/ee.00008i.com/public/customlivechat/php/lib/ServiceContainer.php:55 (Service:setServiceContainer())
+/www/wwwroot/ee.00008i.com/public/customlivechat/php/lib/Model.php:20 (ServiceContainer:get())
+/www/wwwroot/ee.00008i.com/public/customlivechat/php/model/UserModel.php:518 (Model:__construct())
+/www/wwwroot/ee.00008i.com/public/customlivechat/php/controller/OperatorController.php:356 (UserModel:repo())
+/www/wwwroot/ee.00008i.com/public/customlivechat/php/app/Application.php:165 (OperatorController:isOnlineAction())
+/www/wwwroot/ee.00008i.com/public/customlivechat/php/app/Application.php:89 (Application:runAction())
+/www/wwwroot/ee.00008i.com/public/customlivechat/php/app.php:27 (Application:run())
+
+2023-08-11 11:54:14 [error] SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+Stack trace:
+/www/wwwroot/ee.00008i.com/public/customlivechat/php/service/ExceptionHandler.php:23 (Logger:error())
+/www/wwwroot/ee.00008i.com/public/customlivechat/php/app/Application.php:180 (ExceptionHandler:createResponse())
+/www/wwwroot/ee.00008i.com/public/customlivechat/php/app/Application.php:89 (Application:runAction())
+/www/wwwroot/ee.00008i.com/public/customlivechat/php/app.php:27 (Application:run())
+

